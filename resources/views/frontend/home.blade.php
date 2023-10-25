@@ -371,11 +371,11 @@
             <div class="team-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
                 <div class="inner-box">
                     <div class="image-box">
-                        <figure class="image"><a href="page-team-details.html"><img src="{{ asset('uploads/team') }}/{{ $team->image }}" alt=""></a></figure>
+                        <figure class="image"><a><img src="{{ asset('uploads/team') }}/{{ $team->image }}" alt=""></a></figure>
                         
                     </div>
                     <div class="info-box">
-                        <h5 class="name"><a href="page-team-details.html" title="">{{ $team->name }}</a></h5>
+                        <h5 class="name"><a title="">{{ $team->name }}</a></h5>
                         <span class="designation">{{ $team->post }}</span>
                     </div>
                 </div>

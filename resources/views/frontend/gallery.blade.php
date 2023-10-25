@@ -23,88 +23,20 @@
 			<div class="outer-box">
 				<div class="row">
 					<!-- Project Block -->
+					@foreach ($gallerys as $gallery)
 					<div class=" project-block col-lg-4 col-md-6 col-sm-12">
 						<div class="inner-box">
 							<div class="image-box">
-								<figure class="image"><a href="page-project-details.html"><img src="{{ asset('frontend') }}/images/resource/project-1.jpg" alt=""></a></figure>
+								<figure class="image"><a><img src="{{ asset('uploads/gallery') }}/{{ $gallery->image }}" alt=""></a></figure>
 							</div>
 							<div class="content-box">
-								<a href="page-project-details.html" class="icon"><i class="fa fa-long-arrow-alt-right"></i></a>
-								<span class="cat">DESIGN / IDEAS</span>
-								<h4 class="title"><a href="page-project-details.html" title="">Get the Website  Solutions</a></h4>
+								<a class="icon"><i class="fa fa-long-arrow-alt-right"></i></a>
+								<span class="cat">{{ $gallery->address }}</span>
+								<h4 class="title"><a title="">{{ $gallery->title }}</a></h4>
 							</div>
 						</div>
 					</div>
-
-					<!-- Project Block -->
-					<div class=" project-block col-lg-4 col-md-6 col-sm-12">
-						<div class="inner-box">
-							<div class="image-box">
-								<figure class="image"><a href="page-project-details.html"><img src="{{ asset('frontend') }}/images/resource/project-2.jpg" alt=""></a></figure>
-							</div>
-							<div class="content-box">
-								<a href="page-project-details.html" class="icon"><i class="fa fa-long-arrow-alt-right"></i></a>
-								<span class="cat">DESIGN / IDEAS</span>
-								<h4 class="title"><a href="page-project-details.html" title="">Get the Website Solutions</a></h4>
-							</div>
-						</div>
-					</div>
-
-					<!-- Project Block -->
-					<div class=" project-block col-lg-4 col-md-6 col-sm-12">
-						<div class="inner-box">
-							<div class="image-box">
-								<figure class="image"><a href="page-project-details.html"><img src="{{ asset('frontend') }}/images/resource/project-3.jpg" alt=""></a></figure>
-							</div>
-							<div class="content-box">
-								<a href="page-project-details.html" class="icon"><i class="fa fa-long-arrow-alt-right"></i></a>
-								<span class="cat">DESIGN / IDEAS</span>
-								<h4 class="title"><a href="page-project-details.html" title="">Get the Website Solutions</a></h4>
-							</div>
-						</div>
-					</div>
-
-					<!-- Project Block -->
-					<div class=" project-block col-lg-4 col-md-6 col-sm-12">
-						<div class="inner-box">
-							<div class="image-box">
-								<figure class="image"><a href="page-project-details.html"><img src="{{ asset('frontend') }}/images/resource/project-4.jpg" alt=""></a></figure>
-							</div>
-							<div class="content-box">
-								<a href="page-project-details.html" class="icon"><i class="fa fa-long-arrow-alt-right"></i></a>
-								<span class="cat">DESIGN / IDEAS</span>
-								<h4 class="title"><a href="page-project-details.html" title="">Get the Website Solutions</a></h4>
-							</div>
-						</div>
-					</div>
-
-					<!-- Project Block -->
-					<div class=" project-block col-lg-4 col-md-6 col-sm-12">
-						<div class="inner-box">
-							<div class="image-box">
-								<figure class="image"><a href="page-project-details.html"><img src="{{ asset('frontend') }}/images/resource/project-1.jpg" alt=""></a></figure>
-							</div>
-							<div class="content-box">
-								<a href="page-project-details.html" class="icon"><i class="fa fa-long-arrow-alt-right"></i></a>
-								<span class="cat">DESIGN / IDEAS</span>
-								<h4 class="title"><a href="page-project-details.html" title="">Get the Website  Solutions</a></h4>
-							</div>
-						</div>
-					</div>
-
-					<!-- Project Block -->
-					<div class=" project-block col-lg-4 col-md-6 col-sm-12">
-						<div class="inner-box">
-							<div class="image-box">
-								<figure class="image"><a href="page-project-details.html"><img src="{{ asset('frontend') }}/images/resource/project-2.jpg" alt=""></a></figure>
-							</div>
-							<div class="content-box">
-								<a href="page-project-details.html" class="icon"><i class="fa fa-long-arrow-alt-right"></i></a>
-								<span class="cat">DESIGN / IDEAS</span>
-								<h4 class="title"><a href="page-project-details.html" title="">Get the Website Solutions</a></h4>
-							</div>
-						</div>
-					</div>
+					@endforeach
 				</div>
 			</div>
 		</div>

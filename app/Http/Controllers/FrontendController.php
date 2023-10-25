@@ -76,11 +76,17 @@ class FrontendController extends Controller
     }
     //gallerys
     function gallerys(){
-        return view('frontend.gallery');
+        $gallerys = gallery::where('status', 1)->get();
+        return view('frontend.gallery', [
+            'gallerys'=>$gallerys,
+        ]);
     }
     //our_team
     function our_team(){
-        return view('frontend.team');
+        $teams = team::where('status', 1)->get();
+        return view('frontend.team', [
+            'teams'=>$teams,
+        ]);
     } 
     //our_team
     function our_clients(){
