@@ -14,14 +14,6 @@
                 <form action="{{ route('blog.store') }}" method="POST" enctype="multipart/form-data">
                 @csrf
                     <div class="row g-3">
-                        <div class="col-12">
-                            <label class="form-label">Category</label>
-                            <select name="feature_id" id="" class="form-control form-control-sm @error('feature_id') is-invalid @enderror" value="{{ old('feature_id') }}">
-                                @foreach ($feature_id as $feature)
-                                    <option value="{{ $feature->id }}">{{ $feature->name }}</option>
-                                @endforeach
-                            </select>
-                        </div>
                         <div class="col-sm-6">
                             <label class="form-label">Title</label>
                             <input type="text" name="title" class="form-control form-control-sm @error('title') is-invalid @enderror" value="{{ old('title') }}">
@@ -30,10 +22,10 @@
                             <label class="form-label">Image</label>
                             <input type="file" name="image" class="form-control form-control-sm @error('image') is-invalid @enderror" value="{{ old('image') }}">
                         </div>
-                        <div class="col-sm-6">
+                        {{-- <div class="col-sm-6">
                             <label class="form-label" for="tags">Tags</label>
                             <input type="text" id="tags"  class="form-control form-control-sm @error('tags') is-invalid @enderror" value="{{ old('tags') }}">
-                        </div>
+                        </div> --}}
                         <div id="selected-tags"></div>
                         <div class="col-6">
                             <label class="form-label">Home Page</label>
@@ -99,10 +91,9 @@
                                     <input class="form-check-input" type="checkbox" id="markAllProduct">
                                 </div>
                             </th>
-                            <th>Category</th>
                             <th>Added By</th>
-                            <th>Tag</th>
-                            {{-- <th>Description</th> --}}
+                            {{-- <th>Tag</th> --}}
+                            <th>Define</th>
                             <th>Status</th>
                             <th>Action</th>
                         </tr>
@@ -120,7 +111,6 @@
                                         </div>
                                     </div>
                                 </td>
-                                <td><span class="table-dscr">{{ $blog->rel_to_feature->name }}</span></td>
                                 <td>
                                     @if($blog->added_by != null)
                                         <span class="table-dscr">{{ $blog->rel_to_user->name }}</span>
@@ -128,8 +118,14 @@
                                         <span class="table-dscr">N/A</span>
                                     @endif
                                 </td>
-                                <td><span class="table-dscr">{{ $blog->tags }}</span></td>
-                                {{-- <td><span class="table-dscr" style="height: 40px; width: 40px">{!! $blog->description !!}</span></td> --}}
+                                {{-- <td><span class="table-dscr">{{ $blog->tags }}</span></td> --}}
+                                <td>
+                                    @if ($blog->define == 2)
+                                        <span class="table-dscr text-primary">Home</span>
+                                    @else
+                                        <span class="table-dscr text-primary">Blog</span>
+                                    @endif
+                                </td>
                                 <td>
                                     @if ($blog->status == 1)
                                         <span class="table-dscr text-success">Active</span>

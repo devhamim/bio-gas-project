@@ -14,9 +14,9 @@
                     <li class="sidebar-dropdown-item">
                         <a href="{{ route('users.index') }}" class="sidebar-link"><span class="nav-icon"><i class="fa-light fa-user-group"></i></span> <span class="sidebar-txt">All User</span></a>
                     </li>
-                    <li class="sidebar-dropdown-item">
+                    {{-- <li class="sidebar-dropdown-item">
                         <a href="{{ route('feature.index') }}" class="sidebar-link"><span class="nav-icon"><i class="fa-light fa-plus-square"></i></span> <span class="sidebar-txt">Feature</span></a>
-                    </li>
+                    </li> --}}
                     <li class="sidebar-dropdown-item">
                         <a href="{{ route('about.index') }}" class="sidebar-link"><span class="nav-icon"><i class="fa-light fa-boxes"></i></span> <span class="sidebar-txt">About</span></a>
                     </li>
@@ -38,12 +38,12 @@
                     <li class="sidebar-dropdown-item">
                         <a href="{{ route('service.index') }}" class="sidebar-link"><span class="nav-icon"><i class="fa-light fa-file-invoice"></i></span> <span class="sidebar-txt">Service</span></a>
                     </li>
-                    <li class="sidebar-dropdown-item">
+                    {{-- <li class="sidebar-dropdown-item">
                         <a href="{{ route('pricing.index') }}" class="sidebar-link"><span class="nav-icon"><i class="fa-light fa-file-invoice"></i></span> <span class="sidebar-txt">Pricing</span></a>
-                    </li>
-                    <li class="sidebar-dropdown-item">
+                    </li> --}}
+                    {{-- <li class="sidebar-dropdown-item">
                         <a href="{{ route('portfolios.index') }}" class="sidebar-link"><span class="nav-icon"><i class="fa-light fa-file-invoice"></i></span> <span class="sidebar-txt">Portfolio</span></a>
-                    </li>
+                    </li> --}}
                     <li class="sidebar-dropdown-item">
                         <a href="{{ route('blog.index') }}" class="sidebar-link"><span class="nav-icon"><i class="fa-light fa-user-plus"></i></span> <span class="sidebar-txt">Blog</span></a>
                     </li>

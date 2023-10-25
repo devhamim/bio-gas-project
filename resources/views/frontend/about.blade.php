@@ -7,8 +7,7 @@
         <div class="title-outer">
             <h1 class="title">About Us</h1>
             <ul class="page-breadcrumb">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#">Pages</a></li>
+                <li><a href="{{ url('/') }}">Home</a></li>
                 <li>About</li>
             </ul>
         </div>
@@ -17,36 +16,22 @@
 <!-- end main-content -->
 
 <!-- About Section -->
-<section class="about-section">
+@if ( $abouts->first() != null)
+<section class="about-section pt-5">
     <div class="auto-container">
         <div class="row">
             <!-- Content Column -->
             <div class="content-column col-lg-6 col-md-12 col-sm-12 order-2 wow fadeInRight">
                 <div class="inner-column">
                     <div class="sec-title">
-                        <span class="sub-title">Welcome to disle</span>
-                        <h2>Introducing Quality Digital Agency.</h2>
-                        <div class="text">Lorem ipsum dolor sit amet, consectetur notted adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua lonm andhn.</div>
+                        <span class="sub-title">{{ $abouts->first()->subtitle }}</span>
+                        <h2>{{ $abouts->first()->title }}</h2>
+                        <div class="text">{!! $abouts->first()->description !!}</div>
                     </div>
-                    <ul class="list-style-two">
-                        <li><i class="fal fa-check-circle"></i> Nsectetur cing elit.</li>
-                        <li><i class="fal fa-check-circle"></i> Suspe ndisse suscipit sagittis leo.</li>
-                        <li><i class="fal fa-check-circle"></i> Entum estibulum dignissim posuere.</li>
-                    </ul>
 
                     <div class="other-info">
-                        <div class="info-box">
-                            <i class="icon flaticon-phone-ringing"></i>
-                            <span class="title">Get a free Quote</span>
-                            <a href="tel:+92(8800)36780" class="info-text">+92 (8800) 36780</a>
-                        </div>
-
-                        <div class="founded-year">
-                            <i class="icon flaticon-trophy"></i>
-                            <h6 class="title">Since <br > 2016</h6>
-                        </div>
-
-                        <a href="page-about.html" class="theme-btn btn-style-one dark-bg"><span class="btn-title">Discover more</span></a>
+                        
+                        <a href="{{ route('about_us') }}" class="theme-btn btn-style-one dark-bg"><span class="btn-title">About Us</span></a>
 
                     </div>
                 </div>
@@ -56,12 +41,13 @@
             <div class="image-column col-lg-6 col-md-12 col-sm-12 wow fadeInLeft" data-wow-delay="600ms">
                 <div class="image-box">
                     <span class="icon-shpaes zoom-one"></span>
-                    <figure class="image wow fadeIn"><img src="images/resource/about-1.png" alt=""></figure>
+                    <figure class="image wow fadeIn"><img src="{{ asset('uploads/about') }}/{{ $abouts->first()->image }}" alt=""></figure>
                 </div>
             </div>
         </div>
     </div>
 </section>
+@endif
 <!-- End About Section -->
 
 <!-- Services Section Four -->
@@ -70,65 +56,25 @@
     <div class="auto-container">
         <div class="sec-title text-center">
             <span class="sub-title">our services</span>
-            <h2>Special Digital Services</h2>
+            <h2>Special Services</h2>
         </div>
 
         <div class="row">
             <!-- Service Block Four -->
+            @foreach ($services->take(4) as $service)
             <div class="service-block-four col-lg-3 col-md-6 col-sm-12">
                 <div class="inner-box">
                     <div class="image-box">
-                        <figure class="image"><a href="page-service-details.html"><img src="{{ asset('frontend') }}/images/resource/service2-1.jpg" alt=""></a></figure>
+                        <figure class="image"><a ><img src="{{ asset('uploads/service') }}/{{ $service->image }}" alt=""></a></figure>
                     </div>
                     <div class="content-box">
-                        <i class="icon flaticon-front-end"></i>
-                        <h5 class="title"><a href="page-service-details.html">Website <br>Development</a></h5>
-                        <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing</div>
+                        <i class="icon"><img src="{{ asset('uploads/service') }}/{{ $service->icon }}" alt=""></i>
+                        <h5 class="title"><a>{{ $service->title }}</a></h5>
+                        <div class="text">{{ $service->sort_desp }}</div>
                     </div>
                 </div>
             </div>
-            
-            <!-- Service Block Four -->
-            <div class="service-block-four col-lg-3 col-md-6 col-sm-12">
-                <div class="inner-box">
-                    <div class="image-box">
-                        <figure class="image"><a href="page-service-details.html"><img src="{{ asset('frontend') }}/images/resource/service2-2.jpg" alt=""></a></figure>
-                    </div>
-                    <div class="content-box">
-                        <i class="icon flaticon-television"></i>
-                        <h5 class="title"><a href="page-service-details.html">Graphic <br>Designing</a></h5>
-                        <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Service Block Four -->
-            <div class="service-block-four col-lg-3 col-md-6 col-sm-12">
-                <div class="inner-box">
-                    <div class="image-box">
-                        <figure class="image"><a href="page-service-details.html"><img src="{{ asset('frontend') }}/images/resource/service2-3.jpg" alt=""></a></figure>
-                    </div>
-                    <div class="content-box">
-                        <i class="icon flaticon-android-logo"></i>
-                        <h5 class="title"><a href="page-service-details.html">Application <br>Development</a></h5>
-                        <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Service Block Four -->
-            <div class="service-block-four col-lg-3 col-md-6 col-sm-12">
-                <div class="inner-box">
-                    <div class="image-box">
-                        <figure class="image"><a href="page-service-details.html"><img src="{{ asset('frontend') }}/images/resource/service2-4.jpg" alt=""></a></figure>
-                    </div>
-                    <div class="content-box">
-                        <i class="icon flaticon-web-1"></i>
-                        <h5 class="title"><a href="page-service-details.html">Digital <br>Marketing</a></h5>
-                        <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing</div>
-                    </div>
-                </div>
-            </div>
+            @endforeach
         </div>
     </div>
 </section>
@@ -143,16 +89,9 @@
             <!--clients carousel-->
 
             <ul class="clients-carousel owl-carousel owl-theme">
-
-                <li class="client-block"> <a href="#"><img src="{{ asset('frontend') }}/images/clients/1.png" alt=""></a> </li>
-
-                <li class="client-block"> <a href="#"><img src="{{ asset('frontend') }}/images/clients/1.png" alt=""></a> </li>
-
-                <li class="client-block"> <a href="#"><img src="{{ asset('frontend') }}/images/clients/1.png" alt=""></a> </li>
-
-                <li class="client-block"> <a href="#"><img src="{{ asset('frontend') }}/images/clients/1.png" alt=""></a> </li>
-
-                <li class="client-block"> <a href="#"><img src="{{ asset('frontend') }}/images/clients/1.png" alt=""></a> </li>
+                @foreach ($clients as $client)
+                    <li class="client-block"> <a><img src="{{ asset('uploads/client') }}/{{ $client->image }}" alt=""></a> </li>
+                @endforeach
 
             </ul>
         </div>
@@ -160,7 +99,7 @@
 </section>
 <!--End Clients Section -->
 
- <!-- Why Choose Us -->
+ {{-- <!-- Why Choose Us -->
 <section class="why-choose-us-two">
     <div class="bg bg-pattern-11"></div>
 
@@ -223,7 +162,7 @@
         </div>
     </div>
 </section>
-<!-- end-benifet-sec -->
+<!-- end-benifet-sec --> --}}
 
 <!-- Team Section -->
 <section class="team-section">
@@ -236,64 +175,20 @@
         
         <div class="row">
             <!-- Team Block -->
+            @foreach ($teams->take(3) as $team)
             <div class="team-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
                 <div class="inner-box">
                     <div class="image-box">
-                        <figure class="image"><a href="page-team-details.html"><img src="{{ asset('frontend') }}/images/resource/team-1.jpg" alt=""></a></figure>
-                        <span class="share-icon fa fa-share-alt"></span>
-                        <ul class="social-links">
-                            <li><a href="#" title=""><i class="fab fa-twitter"></i></a></li>
-                            <li><a href="#" title=""><i class="fab fa-facebook-square"></i></a></li>
-                            <li><a href="#" title=""><i class="fab fa-pinterest"></i></a></li>
-                            <li><a href="#" title=""><i class="fab fa-instagram"></i></a></li>
-                        </ul>
+                        <figure class="image"><a><img src="{{ asset('uploads/team') }}/{{ $team->image }}" alt=""></a></figure>
+                        
                     </div>
                     <div class="info-box">
-                        <h5 class="name"><a href="page-team-details.html" title="">Mike Hardson</a></h5>
-                        <span class="designation">designer</span>
+                        <h5 class="name"><a title="">{{ $team->name }}</a></h5>
+                        <span class="designation">{{ $team->post }}</span>
                     </div>
                 </div>
             </div>
-
-            <!-- Team Block -->
-            <div class="team-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="400ms">
-                <div class="inner-box">
-                    <div class="image-box">
-                        <figure class="image"><a href="page-team-details.html"><img src="{{ asset('frontend') }}/images/resource/team-2.jpg" alt=""></a></figure>
-                        <span class="share-icon fa fa-share-alt"></span>
-                        <ul class="social-links">
-                            <li><a href="#" title=""><i class="fab fa-twitter"></i></a></li>
-                            <li><a href="#" title=""><i class="fab fa-facebook-square"></i></a></li>
-                            <li><a href="#" title=""><i class="fab fa-pinterest"></i></a></li>
-                            <li><a href="#" title=""><i class="fab fa-instagram"></i></a></li>
-                        </ul>
-                    </div>
-                    <div class="info-box">
-                        <h5 class="name"><a href="page-team-details.html" title="">Aleesha Brown</a></h5>
-                        <span class="designation">designer</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Team Block -->
-            <div class="team-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="800ms">
-                <div class="inner-box">
-                    <div class="image-box">
-                        <figure class="image"><a href="page-team-details.html"><img src="{{ asset('frontend') }}/images/resource/team-3.jpg" alt=""></a></figure>
-                        <span class="share-icon fa fa-share-alt"></span>
-                        <ul class="social-links">
-                            <li><a href="#" title=""><i class="fab fa-twitter"></i></a></li>
-                            <li><a href="#" title=""><i class="fab fa-facebook-square"></i></a></li>
-                            <li><a href="#" title=""><i class="fab fa-pinterest"></i></a></li>
-                            <li><a href="#" title=""><i class="fab fa-instagram"></i></a></li>
-                        </ul>
-                    </div>
-                    <div class="info-box">
-                        <h5 class="name"><a href="page-team-details.html" title="">Kevin Martin</a></h5>
-                        <span class="designation">designer</span>
-                    </div>
-                </div>
-            </div>
+            @endforeach
         </div>
     </div>
 </section>

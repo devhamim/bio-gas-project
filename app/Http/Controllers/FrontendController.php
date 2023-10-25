@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\about;
 use App\Models\achieve;
+use App\Models\blog;
 use App\Models\client;
 use App\Models\customerSay;
 use App\Models\gallery;
@@ -23,6 +24,7 @@ class FrontendController extends Controller
         $clients = client::where('status', 1)->get();
         $achieves = achieve::where('status', 1)->get();
         $customerSays = customerSay::where('status', 1)->get();
+        $blogs = blog::where('status', 1)->where('define', 2)->get();
         $settings = setting::all();
         return view('frontend.home',[
             'abouts'=>$abouts,
@@ -33,16 +35,29 @@ class FrontendController extends Controller
             'clients'=>$clients,
             'achieves'=>$achieves,
             'customerSays'=>$customerSays,
+            'blogs'=>$blogs,
         ]);
     }
     
     //about_us
     function about_us(){
-        return view('frontend.about');
+        $abouts = about::where('status', 1)->where('define', 2)->get();
+        $services = service::where('status', 1)->get();
+        $clients = client::where('status', 1)->get();
+        $teams = team::where('status', 1)->get();
+        return view('frontend.about', [
+            'abouts'=>$abouts,
+            'services'=>$services,
+            'clients'=>$clients,
+            'teams'=>$teams,
+        ]);
     }
     //services
     function services(){
-        return view('frontend.services');
+        $services = service::where('status', 1)->get();
+        return view('frontend.services', [
+            'services'=>$services,
+        ]);
     }
     //our_portfolio
     function our_portfolio(){
@@ -54,7 +69,10 @@ class FrontendController extends Controller
     }
     //contect
     function contect(){
-        return view('frontend.contect');
+        $settings = setting::all();
+        return view('frontend.contect', [
+            'settings'=>$settings,
+        ]);
     }
     //gallerys
     function gallerys(){

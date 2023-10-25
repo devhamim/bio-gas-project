@@ -14,14 +14,6 @@
                 <form action="{{ route('service.store') }}" method="POST" enctype="multipart/form-data">
                 @csrf
                     <div class="row g-3">
-                        {{-- <div class="col-12">
-                            <label class="form-label">Category</label>
-                            <select name="feature_id" id="" class="form-control form-control-sm @error('feature_id') is-invalid @enderror" value="{{ old('feature_id') }}">
-                                @foreach ($feature_id as $feature)
-                                    <option value="{{ $feature->id }}">{{ $feature->name }}</option>
-                                @endforeach
-                            </select>
-                        </div> --}}
                         
                         <div class="col-12">
                             <label class="form-label">Title</label>
@@ -39,15 +31,7 @@
                             <label class="form-label">Sort Description</label>
                             <textarea name="sort_desp" class="form-control form-control-sm @error('sort_desp') is-invalid @enderror">{{ old('sort_desp') }}</textarea>
                         </div>
-                       
-                        {{-- <div class="col-12">
-                            <label class="form-label">Description</label>
-                            <textarea rows="7" id="summernote" name="description" class="form-control form-control-sm @error('description') is-invalid @enderror">{{ old('description') }}</textarea>
-                            @error('description')
-                                <strong class="text-danger">{{ $message }}</strong>
-                            @enderror
-                        </div> --}}
-                        
+                    
                         <div class="col-12 d-flex justify-content-end">
                             <div class="btn-box">
                                 <button type="submit" class="btn btn-sm btn-primary">Save</button>
@@ -90,7 +74,6 @@
                                 </div>
                             </th>
                             <th>Image</th>
-                            {{-- <th>Category</th> --}}
                             <th>Sort Description</th>
                             <th>Status</th>
                             <th>Action</th>
@@ -110,7 +93,6 @@
                                     </div>
                                 </td>
                                 <td><span><img width="60px" src="{{ asset('uploads/service') }}/{{ $service->image }}" alt=""></span></td>
-                                {{-- <td><span class="table-dscr">{{ $service->rel_to_feature->name }}</span></td> --}}
                                 <td><span class="table-dscr">{{ $service->sort_desp }}</span></td>
                                 <td>
                                     @if ($service->status == 1)

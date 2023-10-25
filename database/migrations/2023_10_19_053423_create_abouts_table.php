@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('title');
             $table->string('image')->nullable();
             $table->longText('description');
-            $table->integer('define')->default(1);
+            $table->integer('define')->default(2);
             $table->integer('status')->default(1);
             $table->timestamps();
         });

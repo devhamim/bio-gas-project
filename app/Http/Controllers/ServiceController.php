@@ -36,12 +36,10 @@ class ServiceController extends Controller
     public function store(Request $request)
     {
         $rules = [
-            'feature_id'        =>'',
             'title'             =>'required',
             'icon'              =>'',
             'image'             =>'',
             'sort_desp'         =>'',
-            'description'       =>'',
         ];
 
         $validatesData = $request->validate($rules); 
@@ -94,12 +92,10 @@ class ServiceController extends Controller
     public function update(Request $request, string $id)
     {
         $rules = [
-            'feature_id'        =>'',
             'title'             =>'required',
             'icon'              =>'',
             'image'             =>'',
             'sort_desp'         =>'',
-            'description'       =>'',
             'status'            =>'required',
         ];
 

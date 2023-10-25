@@ -133,7 +133,7 @@
                     </ul>
                 </div>
                 <div class="col-lg-4 col-md-4">
-                    <p class="copyright-text">© Copyright 2023 by Company.com</p>
+                    <p class="copyright-text">{{ $setting->first()->footer }}</p>
                 </div>
             </div>
         </div>

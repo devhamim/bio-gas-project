@@ -16,14 +16,6 @@
                 @method('PUT')
                 <input type="hidden" name="id" value="{{ $blogs->id }}">
                     <div class="row g-3">
-                        <div class="col-12">
-                            <label class="form-label">Category</label>
-                            <select name="feature_id" id="" class="form-control form-control-sm @error('feature_id') is-invalid @enderror" value="{{ old('feature_id') }}">
-                                @foreach ($feature_id as $feature)
-                                    <option value="{{ $feature->id }}"{{ $feature->id == $blogs->id?'selected':'' }}>{{ $feature->name }}</option>
-                                @endforeach
-                            </select>
-                        </div>
                         
                         <div class="col-12">
                             <label class="form-label">Title</label>
@@ -40,7 +32,7 @@
                                 <img width="100" id="blah" src="{{ asset('uploads/blog') }}/{{ $blogs->image }}" alt="">
                             </div>
                         </div>
-                        <div class="col-sm-6">
+                        {{-- <div class="col-sm-6">
                             <label class="form-label" for="tags">Tags</label>
                             <input type="text" name="tags" id="tags" class="form-control form-control-sm @error('tags') is-invalid @enderror" value="{{ old('tags') }}">
                         </div>
@@ -49,7 +41,7 @@
                                 @foreach(explode(',', $blogs->tags) as $tag)
                                     <span class="tag bg-success text-white pb-1 px-2 rounded mx-1">{{ $tag }}</span>
                                 @endforeach
-                        </div>
+                        </div> --}}
                         <div class="col-6">
                             <label class="form-label">Home Page</label>
                             <div class="form-check mb-10">

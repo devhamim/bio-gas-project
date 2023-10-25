@@ -6388,7 +6388,7 @@ Section Title
   position: relative;
   z-index: 2;
 }
-.service-block-four .inner-box .icon:after {
+.service-block-four .inner-box .icon::after {
   position: absolute;
   left: 0;
   top: 0;

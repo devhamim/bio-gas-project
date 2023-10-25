@@ -154,7 +154,7 @@
 <!-- End Features Section -->
 
 <!-- About Section -->
-@foreach ($abouts as $about)
+@if ( $abouts->first() != null)
 <section class="about-section pt-0">
     <div class="auto-container">
         <div class="row">
@@ -162,9 +162,9 @@
             <div class="content-column col-lg-6 col-md-12 col-sm-12 order-2 wow fadeInRight">
                 <div class="inner-column">
                     <div class="sec-title">
-                        <span class="sub-title">{{ $about->first()->subtitle }}</span>
-                        <h2>{{ $about->first()->title }}</h2>
-                        <div class="text">{!! $about->first()->description !!}</div>
+                        <span class="sub-title">{{ $abouts->first()->subtitle }}</span>
+                        <h2>{{ $abouts->first()->title }}</h2>
+                        <div class="text">{!! $abouts->first()->description !!}</div>
                     </div>
 
                     <div class="other-info">
@@ -179,13 +179,13 @@
             <div class="image-column col-lg-6 col-md-12 col-sm-12 wow fadeInLeft" data-wow-delay="600ms">
                 <div class="image-box">
                     <span class="icon-shpaes zoom-one"></span>
-                    <figure class="image wow fadeIn"><img src="{{ asset('uploads/about') }}/{{ $about->first()->image }}" alt=""></figure>
+                    <figure class="image wow fadeIn"><img src="{{ asset('uploads/about') }}/{{ $abouts->first()->image }}" alt=""></figure>
                 </div>
             </div>
         </div>
     </div>
 </section>
-@endforeach
+@endif
 <!-- End About Section -->
 
 <!-- Services Section -->
@@ -287,7 +287,7 @@
                 @foreach ($achieves->take(4) as $achieve)
                 <div class="counter-block col-lg-3 col-md-6 col-sm-12 wow fadeInUp">
                     <div class="inner">
-                        <div class="icon-box"><i><img src="{{ asset('uploads/achieve') }}/{{ $achieve->icon }}" alt=""></i></div>
+                        <div class="icon-box" style="background-repeat: no-repeat"><i><img src="{{ asset('uploads/achieve') }}/{{ $achieve->icon }}" alt=""></i></div>
                         <div class="count-box"><span class="count-text" data-speed="3000" data-stop="{{ $achieve->total }}">0</span></div>
                         <h4 class="counter-title">{{ $achieve->title }}</h4>
                     </div>
@@ -464,71 +464,30 @@
 
         <div class="row">
             <!-- News Block -->
+            @foreach ($blogs as $blog)
             <div class="news-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
                 <div class="inner-box">
                     <div class="image-box">
-                        <figure class="image"><a href="news-details.html"><img src="{{ asset('frontend') }}/images/resource/news-1.jpg" alt=""></a></figure>
-                        <span class="date">20 Mar, 2023</span>
+                        <figure class="image"><a href="{{ route('our.blog', $blog->id) }}"><img src="{{ asset('uploads/blog') }}/{{ $blog->image }}" alt=""></a></figure>
+                        <span class="date">{{ $blog->created_at->format('d,M,Y') }}</span>
                     </div>
                     <div class="content-box">
-                        <div class="author-info">
-                            <div class="author-thumb"><img src="{{ asset('frontend') }}/images/resource/avatar1.jpg" alt=""></div>
-                            <span class="author-name">by Mike Hardson</span>
+                        @if ($blog->added_by != null)
+                        <div class="author-info">   
+                            @if ($blog->rel_to_user->image != null)
+                                <div class="author-thumb"><img src="{{ asset('uploads/users') }}/{{ $blog->rel_to_user->image }}" alt=""></div>
+                            @endif    
+                            <span class="author-name">{{ $blog->rel_to_user->name }}</span>
                         </div>
-                        <h5 class="title"><a href="news-details.html" title="">Five Ways that can Develop your Business Website</a></h5>
-                        <div class="text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem…</div>
+                        @endif
+                        <h5 class="title"><a href="{{ route('our.blog', $blog->id) }}" title="">{{ $blog->title }}</a></h5>
                         <ul class="post-info">
-                            <li class="read-more"><a href="news-details.html" title=""><i class="fa fa-long-arrow-alt-right"></i> More</a></li>
-                            <li class="comments"><a href="#" title=""><i class="fa fa-comments color1"></i> 2 Comments</a></li>
+                            <li class="read-more"><a href="{{ route('our.blog', $blog->id) }}" title=""><i class="fa fa-long-arrow-alt-right"></i> More</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
-
-            <!-- News Block -->
-            <div class="news-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="300ms">
-                <div class="inner-box">
-                    <div class="image-box">
-                        <figure class="image"><a href="news-details.html"><img src="{{ asset('frontend') }}/images/resource/news-2.jpg" alt=""></a></figure>
-                        <span class="date">20 Mar, 2023</span>
-                    </div>
-                    <div class="content-box">
-                        <div class="author-info">
-                            <div class="author-thumb"><img src="{{ asset('frontend') }}/images/resource/avatar1.jpg" alt=""></div>
-                            <span class="author-name">by Mike Hardson</span>
-                        </div>
-                        <h5 class="title"><a href="news-details.html" title="">Five Ways that can Develop your Business Website</a></h5>
-                        <div class="text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem…</div>
-                        <ul class="post-info">
-                            <li class="read-more"><a href="news-details.html" title=""><i class="fa fa-long-arrow-alt-right"></i> More</a></li>
-                            <li class="comments"><a href="#" title=""><i class="fa fa-comments color1"></i> 2 Comments</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <!-- News Block -->
-            <div class="news-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="600ms">
-                <div class="inner-box">
-                    <div class="image-box">
-                        <figure class="image"><a href="news-details.html"><img src="{{ asset('frontend') }}/images/resource/news-3.jpg" alt=""></a></figure>
-                        <span class="date">20 Mar, 2023</span>
-                    </div>
-                    <div class="content-box">
-                        <div class="author-info">
-                            <div class="author-thumb"><img src="{{ asset('frontend') }}/images/resource/avatar1.jpg" alt=""></div>
-                            <span class="author-name">by Mike Hardson</span>
-                        </div>
-                        <h5 class="title"><a href="news-details.html" title="">Five Ways that can Develop your Business Website</a></h5>
-                        <div class="text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem…</div>
-                        <ul class="post-info">
-                            <li class="read-more"><a href="news-details.html" title=""><i class="fa fa-long-arrow-alt-right"></i> More</a></li>
-                            <li class="comments"><a href="#" title=""><i class="fa fa-comments color1"></i> 2 Comments</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
+            @endforeach
         </div>
     </div>
 </section>

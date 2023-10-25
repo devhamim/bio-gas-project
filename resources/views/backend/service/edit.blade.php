@@ -16,14 +16,6 @@
                 @method('PUT')
                 <input type="hidden" name="id" value="{{ $services->id }}">
                     <div class="row g-3">
-                        <div class="col-12">
-                            <label class="form-label">Category</label>
-                            <select name="feature_id" id="" class="form-control form-control-sm @error('feature_id') is-invalid @enderror" value="{{ old('feature_id') }}">
-                                @foreach ($feature_id as $feature)
-                                    <option value="{{ $feature->id }}"{{ $feature->id == $services->id?'selected':'' }}>{{ $feature->name }}</option>
-                                @endforeach
-                            </select>
-                        </div>
                         
                         <div class="col-12">
                             <label class="form-label">Title</label>
@@ -54,10 +46,6 @@
                             <textarea name="sort_desp" class="form-control form-control-sm">{{ $services->sort_desp }}</textarea>
                         </div>
                         
-                        <div class="col-12">
-                            <label class="form-label">Description</label>
-                            <textarea rows="7" id="summernote" name="description" class="form-control form-control-sm">{!! $services->description !!}</textarea>
-                        </div>
                         <div class="col-12">
                             <label class="form-label">Status</label>
                             <select name="status" class="form-control form-control-sm" id="">

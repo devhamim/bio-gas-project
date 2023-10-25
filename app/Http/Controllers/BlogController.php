@@ -15,11 +15,9 @@ class BlogController extends Controller
      */
     public function index()
     {
-        $feature_id = feature::where('status', 1)->get();
         $blogs = blog::all();
 
         return view('backend.blog.index', [
-            'feature_id'=>$feature_id,
             'blogs'=>$blogs,
         ]);
     }
@@ -38,10 +36,9 @@ class BlogController extends Controller
     public function store(Request $request)
     {
         $rules = [
-            'feature_id'      =>'required',
             'title'         =>'required',
             'image'         =>'',
-            'tags'         =>'array',
+            // 'tags'         =>'array',
             'description'   =>'required',
             'define'       =>'required',
         ];
@@ -55,8 +52,8 @@ class BlogController extends Controller
             $validatesData['image'] = $file_name;
         }
 
-        $tagsAsString = implode(',', $validatesData['tags']);
-        $validatesData['tags'] = $tagsAsString;
+        // $tagsAsString = implode(',', $validatesData['tags']);
+        // $validatesData['tags'] = $tagsAsString;
         
         $validatesData['added_by'] = Auth::id(); 
 
@@ -78,12 +75,10 @@ class BlogController extends Controller
      */
     public function edit(string $id)
     {
-        $feature_id = feature::where('status', 1)->get();
         $blogs = blog::find($id);
         $tagsAsString = $blogs->tags;
         return view('backend.blog.edit', [
             'blogs'=>$blogs,
-            'feature_id'=>$feature_id,
             'tagsAsString'=>$tagsAsString,
         ]);
     }
@@ -94,10 +89,9 @@ class BlogController extends Controller
     public function update(Request $request, string $id)
     {
         $rules = [
-            'feature_id'        =>'required',
             'title'             =>'required',
             'image'             =>'',
-            'tags'              =>'array',
+            // 'tags'              =>'array',
             'description'       =>'required',
             'define'            =>'required',
             'status'            =>'',
@@ -112,11 +106,11 @@ class BlogController extends Controller
             $image->move(public_path('uploads/blog'), $file_name);
             $validatesData['image'] = $file_name; 
         }
-        if (!isset($validatesData['tags'])) {
-            $validatesData['tags'] = [];
-        }
-        $tagsAsString = implode(',', $validatesData['tags']);
-        $validatesData['tags'] = $tagsAsString;
+        // if (!isset($validatesData['tags'])) {
+        //     $validatesData['tags'] = [];
+        // }
+        // $tagsAsString = implode(',', $validatesData['tags']);
+        // $validatesData['tags'] = $tagsAsString;
 
         blog::where('id', $id)->update($validatesData);
         toast('Update Success','success');   
