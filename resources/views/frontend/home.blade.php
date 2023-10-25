@@ -1,612 +1,534 @@
 @extends('frontend.layout.app')
 
 @section('content')
-<!-- ===========================
-    =====>> Hero <<===== -->
-    <section id="hero-top" class="hero-six">
-        <div class="hero-six-absolute">
-            <img src="{{ asset('frontend') }}/img/home-6/h6-shape-line.png" alt="">
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 hero-2-col">
-                    <div class="hero-left-content">
-                        <h1 class="hero-title">Robust Marketing Strategies for <span>100% Results</span></h1>
-                        <p>Rapidiously conceptualize sustainable process improvements without superior Quickly parallel task 24/365 catalysts for change.</p>
-                        <a href="#" class="btn-m11">Discover More</a>
-                        <div id="popup-gallery">
-                            <a class="video-play-button" href="https://www.youtube.com/watch?v=iIrSCm_0Sj4">
-                                <span></span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 hero-2-col">
-                    <div class="hero-images hero-six-images">
-                        <img src="{{ asset('frontend') }}/img/home-6/hero6-img.png" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- =====>> End Hero <<===== 
-    =========================== -->
-    <!-- ===========================
-    =====>> Feature <<===== -->
-    <section id="feature" class="feature-area">
-        <div class="container">
-            <div class="feature-dots-images">
-                <img src="{{ asset('frontend') }}/img/home-6/indigo-dots.png" alt="">
-                <img src="{{ asset('frontend') }}/img/home-6/blue-dots.png" alt="">
-                <img src="{{ asset('frontend') }}/img/home-6/indigo-dots.png" alt="">
-                <img src="{{ asset('frontend') }}/img/home-6/blue-dots.png" alt="">
-                <img src="{{ asset('frontend') }}/img/home-6/blue-dots.png" alt="">
-                <img src="{{ asset('frontend') }}/img/home-6/indigo-dots.png" alt="">
-                <img src="{{ asset('frontend') }}/img/home-6/blue-dots.png" alt="">
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="section-content text-left">
-                        <h1>Feature</h1>
-                        <div class="section-border"><span></span></div>
-                    </div>
-                </div>
-            </div>
-            <div class="row pt-35">
-                <div class="col-lg-3 col-md-6 feature-border">
-                    <div class="feature-dots-images1">
-                        <img src="{{ asset('frontend') }}/img/home-6/red-dots.png" alt="">
-                        <img src="{{ asset('frontend') }}/img/home-6/blue-dots.png" alt="">
-                        <img src="{{ asset('frontend') }}/img/home-6/red-dots.png" alt="">
-                        <img src="{{ asset('frontend') }}/img/home-6/blue-dots.png" alt="">
-                        <img src="{{ asset('frontend') }}/img/home-6/blue-dots.png" alt="">
-                        <img src="{{ asset('frontend') }}/img/home-6/red-dots.png" alt="">
-                        <img src="{{ asset('frontend') }}/img/home-6/blue-dots.png" alt="">
-                    </div>
-                    <div class="feature-item">
-                        <img src="{{ asset('frontend') }}/img/website-icon.png" alt="">
-                        <h3>Website Development
-                        </h3>
-                        <p>Naff at public school blog bobby Elizabeth super blo bamboozled blab.</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 feature-border">
-                    <div class="feature-dots-images2">
-                        <img src="{{ asset('frontend') }}/img/home-6/yellow-dots.png" alt="">
-                        <img src="{{ asset('frontend') }}/img/home-6/red-dots.png" alt="">
-                        <img src="{{ asset('frontend') }}/img/home-6/yellow-dots.png" alt="">
-                        <img src="{{ asset('frontend') }}/img/home-6/red-dots.png" alt="">
-                        <img src="{{ asset('frontend') }}/img/home-6/yellow-dots.png" alt="">
-                        <img src="{{ asset('frontend') }}/img/home-6/yellow-dots.png" alt="">
-                    </div>
-                    <div class="feature-item">
-                        <img src="{{ asset('frontend') }}/img/seo-icon.png" alt="">
-                        <h3>SEO & Content Writing
-                        </h3>
-                        <p>Naff at public school blog bobby Elizabeth super blo bamboozled blab.</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 feature-border">
-                    <div class="feature-dots-images3">
-                        <img src="{{ asset('frontend') }}/img/home-6/indigo-dots.png" alt="">
-                        <img src="{{ asset('frontend') }}/img/home-6/blue-dots.png" alt="">
-                        <img src="{{ asset('frontend') }}/img/home-6/indigo-dots.png" alt="">
-                        <img src="{{ asset('frontend') }}/img/home-6/blue-dots.png" alt="">
-                        <img src="{{ asset('frontend') }}/img/home-6/indigo-dots.png" alt="">
-                        <img src="{{ asset('frontend') }}/img/home-6/indigo-dots.png" alt="">
-                    </div>
-                    <div class="feature-item">
-                        <img src="{{ asset('frontend') }}/img/market-icon.png" alt="">
-                        <h3>Market
-                            <br> Research</h3>
-                        <p>Naff at public school blog bobby Elizabeth super blo bamboozled blab.</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 feature-border">
-                    <div class="feature-dots-images4">
-                        <img src="{{ asset('frontend') }}/img/home-6/red-dots.png" alt="">
-                        <img src="{{ asset('frontend') }}/img/home-6/yellow-dots.png" alt="">
-                        <img src="{{ asset('frontend') }}/img/home-6/red-dots.png" alt="">
-                        <img src="{{ asset('frontend') }}/img/home-6/yellow-dots.png" alt="">
-                        <img src="{{ asset('frontend') }}/img/home-6/red-dots.png" alt="">
-                        <img src="{{ asset('frontend') }}/img/home-6/red-dots.png" alt="">
-                    </div>
-                    <div class="feature-item">
-                        <img src="{{ asset('frontend') }}/img/app-icon.png" alt="">
-                        <h3>App
-                            <br> Development</h3>
-                        <p>Naff at public school blog bobby Elizabeth super blo bamboozled blab.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- =====>> End Feature <<===== 
-    =========================== -->
-    <!-- ===========================
-    =====>> Digital Agency <<===== -->
-    <section id="digital-agency" class="digital-agency-area pt-130 pb-130">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 align-middle">
-                    <div class="digital-agency-img">
-                        <img src="{{ asset('frontend') }}/img/home-6/h6-digital-agency.png" alt="">
-                    </div>
-                </div>
-                <div class="col-lg-6 align-middle">
-                    <div class="digital-agency-wrapper">
-                        <div class="section-content">
-                            <h3>Best Digital Agency In The World</h3>
-                            <h2 class="section-title">We're A Dynamic Team Of
-                                <br> Marketing Expert</h2>
-                            <div class="section-border"><span></span></div>
-                        </div>
-                        <p>Cheeky bugger chip shop David super chinwag buggered tickety boo do one asii chimney pot, blow off well pardon me old lurgy absolutely bladdered bodge ours faff about argy-bargy, the wireless vagabod bite your arm off in my flat
-                            I don't want no agro twit pear shaped.
-                            <br><br> Morish grub David are you taking the piss mufty eaton I the little rotter bevv ours tickety boo only well pardon me old lurgy absolutely bladdered bodge abevv faff about argy-bargy, the wireless.!
-                        </p>
-                        <a href="about.html" class="btn-m11">More About</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- =====>> End Digital Agency <<===== 
-    =========================== -->
-    <!-- ===========================
-    =====>> Services <<===== -->
-    <section id="services-area" class="services-six-area pb-130 pt-130">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 align-middle2">
-                    <div class="services-six-content">
-                        <div class="section-content">
-                            <h3>Our Services</h3>
-                            <h2 class="section-title">Experts in online marketing</h2>
-                            <div class="section-border"><span></span></div>
-                        </div>
-                        <div class="services-six-text">
-                            <p>Cheeky bugger chip shop David super chinwag buggered tickety boo do one asii chimney pot, blow off well pardon me old lurgy absolutely bladdered bodge ours faff about argy-bargy, the wireless vagabod bite your arm off in my
-                                flat I don't want no agro twit pear shaped.
-                                <br><br> Morish grub David are you taking the piss mufty eaton I the little rotter bevv ours tickety boo only well pardon me old lurgy absolutely bladdered bodge abevv faff about argy-bargy, the wireless.!
-                            </p>
-                            <a href="services.html" class="btn-m11">Read More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 align-middle2">
-                    <div class="services-six-right">
-                        <div class="services-social-click">
-                            <div class="services-six-icon">
-                                <img src="{{ asset('frontend') }}/img/home-4/marketing.png" alt="">
-                            </div>
-                            <div class="services-six-icon">
-                                <img src="{{ asset('frontend') }}/img/home-4/affiliate.png" alt="">
-                            </div>
-                            <div class="services-six-icon">
-                                <img src="{{ asset('frontend') }}/img/home-4/developments.png" alt="">
-                            </div>
-                            <div class="services-six-icon">
-                                <img src="{{ asset('frontend') }}/img/home-4/optimization.png" alt="">
-                            </div>
-                            <div class="services-six-icon">
-                                <img src="{{ asset('frontend') }}/img/home-4/content-rocket.png" alt="">
-                            </div>
-                            <div class="services-six-icon">
-                                <img src="{{ asset('frontend') }}/img/home-4/app-develo.png" alt="">
-                            </div>
-                        </div>
-                        <div class="sevices-six-slide-text text-center">
-                            <div class="services-six-single-wrapper">
-                                <h3>Social Marketing</h3>
-                                <p>Naff at public schooi blog a beth super blo bamboozed browsing facebook Quis ipsum suspendisse.</p>
-                            </div>
-                            <div class="services-six-single-wrapper">
-                                <h3>Affliate Marketing</h3>
-                                <p>Naff at public schooi blog a beth super blo bamboozed browsing facebook Quis ipsum suspendisse.</p>
-                            </div>
-                            <div class="services-six-single-wrapper">
-                                <h3>Development Marketing</h3>
-                                <p>Naff at public schooi blog a beth super blo bamboozed browsing facebook Quis ipsum suspendisse.</p>
-                            </div>
-                            <div class="services-six-single-wrapper">
-                                <h3>Social Optimization</h3>
-                                <p>Naff at public schooi blog a beth super blo bamboozed browsing facebook Quis ipsum suspendisse.</p>
-                            </div>
-                            <div class="services-six-single-wrapper">
-                                <h3>Content Rocket Marketing</h3>
-                                <p>Naff at public schooi blog a beth super blo bamboozed browsing facebook Quis ipsum suspendisse.</p>
-                            </div>
-                            <div class="services-six-single-wrapper">
-                                <h3>Social App Development</h3>
-                                <p>Naff at public schooi blog a beth super blo bamboozed browsing facebook Quis ipsum suspendisse.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- =====>> End Services <<===== 
-    =========================== -->
+<!--Main Slider-->
+<section class="main-slider">
+    <div class="rev_slider_wrapper fullwidthbanner-container" id="rev_slider_one_wrapper" data-source="gallery">
+        <div class="rev_slider fullwidthabanner" id="rev_slider_one" data-version="5.4.1">
+            <ul>
+                <!-- Slide 1 -->
+                <li data-index="rs-1" data-transition="zoomout">
+                    <!-- MAIN IMAGE -->
+                    <img src="{{ asset('frontend') }}/images/main-slider/1.jpg" alt="" class="rev-slidebg">
 
-    <!-- ===========================
-    =====>> Choose us <<===== -->
-    <section id="choose-us" class="choose-us-area pt-130 pb-130">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 align-middle2">
-                    <div class="why-choose-content">
-                        <div class="section-content">
-                            <h3>Why Choose us</h3>
-                            <h2 class="section-title">Welcome to the Best
-                                <br>An array of online Marketing</h2>
-                            <div class="section-border"><span></span></div>
-                        </div>
-                        <div class="why-choose-all">
-                            <div class="why-choose-only-text">
-                                <p>For startups and growing businesses, an online specialist can develop a digital marketing plan to help you grow and retain a happy client base.</p>
-                            </div>
-                            <div class="why-choose-single-content media">
-                                <div class="why-choose-images">
-                                    <img src="{{ asset('frontend') }}/img/home-6/why-choose-icon1.png" alt="">
-                                </div>
-                                <div class="why-choose-text">
-                                    <h3>Rapid interaction with clients</h3>
-                                    <p>We provide full and specific solutons our every Providing international construction services.</p>
-                                </div>
-                            </div>
-                            <div class="why-choose-single-content media">
-                                <div class="why-choose-images">
-                                    <img src="{{ asset('frontend') }}/img/home-6/why-choose-icon2.png" alt="">
-                                </div>
-                                <div class="why-choose-text">
-                                    <h3>Scientific website optimization</h3>
-                                    <p>We provide full and specific solutons our every Providing international construction services.</p>
-                                </div>
-                            </div>
-                            <div class="why-choose-single-content media">
-                                <div class="why-choose-images">
-                                    <img src="{{ asset('frontend') }}/img/home-6/why-choose-icon3.png" alt="">
-                                </div>
-                                <div class="why-choose-text">
-                                    <h3>Generating increased revenue</h3>
-                                    <p>We provide full and specific solutons our every Providing international construction services.</p>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="tp-caption" 
+                    data-paddingbottom="[15,15,15,15]"
+                    data-paddingleft="[15,15,15,15]"
+                    data-paddingright="[15,15,15,15]"
+                    data-paddingtop="[0,0,0,0]"
+                    data-responsive_offset="on"
+                    data-type="text" data-height="none"
+                    data-width="['900','900','750','450']"
+                    data-whitespace="normal"
+                    data-hoffset="['0','0','0','0']"
+                    data-voffset="['-20','-20','-20','0']"
+                    data-x="['left','left','left','left']"
+                    data-y="['middle','middle','middle','middle']"
+                    data-textalign="['top','top','top','top']"
+                    data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'>
+                        <h1>The Right digital agency.</h1>
                     </div>
-                </div>
-                <div class="col-lg-6 align-middle2">
-                    <div class="why-choose-out-container">
-                        <img src="{{ asset('frontend') }}/img/home-6/h6-why-choose-right.png" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- =====>> End Choose us <<===== 
-    =========================== -->
 
-    <!-- ===========================
-    =====>> Portfolio <<===== -->
-    <section id="portfolio-area" class="portfolio-inner portfolio-six background-color-6 pt-130 pb-130">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="section-content text-center">
-                        <h3>Best Portfolio</h3>
-                        <h2 class="section-title">Our Impressive Portfolio</h2>
-                        <div class="section-border"><span></span></div>
+                    <div class="tp-caption" 
+                    data-paddingbottom="[15,15,15,15]"
+                    data-paddingleft="[15,15,15,15]"
+                    data-paddingright="[15,15,15,15]"
+                    data-paddingtop="[0,0,0,0]"
+                    data-responsive_offset="on"
+                    data-type="text" data-height="none"
+                    data-width="['750','750','750','450']"
+                    data-whitespace="normal"
+                    data-hoffset="['0','0','0','0']"
+                    data-voffset="['105','105','105','105']"
+                    data-x="['left','left','left','left']"
+                    data-y="['middle','middle','middle','middle']"
+                    data-textalign="['top','top','top','top']"
+                    data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'>
+                        <p class="text">You have better things to do than worry about your business</p>
                     </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-6">
-                    <div class="portfolio-item">
-                        <div class="portfolio-img">
-                            <img src="{{ asset('frontend') }}/img/p1.png" alt="">
-                            <div class="portfolio-hover-icon">
-                                <ul>
-                                    <li><a href="#"><i class="fa fa-plus-circle"></i></a></li>
-                                    <li><a href="protfolio-details.html"><i class="fa fa-link"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="portfolio-text">
-                            <h3>Grap Analysis</h3>
-                            <p>Personal and Commercial</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="portfolio-item">
-                        <div class="portfolio-img">
-                            <img src="{{ asset('frontend') }}/img/p2.png" alt="">
-                            <div class="portfolio-hover-icon">
-                                <ul>
-                                    <li><a href="#"><i class="fa fa-plus-circle"></i></a></li>
-                                    <li><a href="protfolio-details.html"><i class="fa fa-link"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="portfolio-text">
-                            <h3>Digital Marketing</h3>
-                            <p>Personal and Commercial</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="portfolio-item">
-                        <div class="portfolio-img">
-                            <img src="{{ asset('frontend') }}/img/p3.png" alt="">
-                            <div class="portfolio-hover-icon">
-                                <ul>
-                                    <li><a href="#"><i class="fa fa-plus-circle"></i></a></li>
-                                    <li><a href="protfolio-details.html"><i class="fa fa-link"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="portfolio-text">
-                            <h3>Web Development</h3>
-                            <p>Personal and Commercial</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="portfolio-item">
-                        <div class="portfolio-img">
-                            <img src="{{ asset('frontend') }}/img/p4.png" alt="">
-                            <div class="portfolio-hover-icon">
-                                <ul>
-                                    <li><a href="#"><i class="fa fa-plus-circle"></i></a></li>
-                                    <li><a href="protfolio-details.html"><i class="fa fa-link"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="portfolio-text">
-                            <h3>Web Development</h3>
-                            <p>Personal and Commercial</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="portfolio-item">
-                        <div class="portfolio-img">
-                            <img src="{{ asset('frontend') }}/img/p5.png" alt="">
-                            <div class="portfolio-hover-icon">
-                                <ul>
-                                    <li><a href="#"><i class="fa fa-plus-circle"></i></a></li>
-                                    <li><a href="protfolio-details.html"><i class="fa fa-link"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="portfolio-text">
-                            <h3>Web Development</h3>
-                            <p>Personal and Commercial</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="portfolio-item">
-                        <div class="portfolio-img">
-                            <img src="{{ asset('frontend') }}/img/p6.png" alt="">
-                            <div class="portfolio-hover-icon">
-                                <ul>
-                                    <li><a href="#"><i class="fa fa-plus-circle"></i></a></li>
-                                    <li><a href="protfolio-details.html"><i class="fa fa-link"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="portfolio-text">
-                            <h3>Web Development</h3>
-                            <p>Personal and Commercial</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- =====>> End Portfolio <<===== 
-    =========================== -->
 
-    <!-- ===========================
-    =====>> We Always Counter <<===== -->
-    <section id="we-always" class="we-always-area pt-130 pb-130">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="section-content text-center">
-                        <h3>We Always</h3>
-                        <h2 class="section-title">Try To Understand Users Expectation</h2>
-                        <div class="section-border"><span></span></div>
+                    <div class="tp-caption" data-paddingbottom="[0,0,0,0]"
+                    data-paddingleft="[15,15,15,15]"
+                    data-paddingright="[15,15,15,15]"
+                    data-paddingtop="[0,0,0,0]"
+                    data-responsive_offset="on"
+                    data-type="text" data-height="none"
+                    data-width="['700','750','700','450']"
+                    data-whitespace="normal"
+                    data-hoffset="['0','0','0','0']"
+                    data-voffset="['180','180','180','200']"
+                    data-x="['left','left','left','left']"
+                    data-y="['middle','middle','middle','middle']"
+                    data-textalign="['top','top','top','top']"
+                    data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'>
+                        <a href="page-about.html" class="theme-btn btn-style-one hover-light"><span class="btn-title">Discover More</span></a>
                     </div>
-                </div>
-            </div>
-            <div class="row pt-35">
-                <div class="col-lg-3 col-md-6">
-                    <div class="we-always-single">
-                        <div class="count-fonts"><span class="counter">2,165 </span>+</div>
-                        <p>Complete Project</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="we-always-single">
-                        <div class="count-fonts"><span class="counter">550 </span>+</div>
-                        <p>Complete Project</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="we-always-single">
-                        <div class="count-fonts"><span class="counter">150 </span>+</div>
-                        <p>Complete Project</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="we-always-single">
-                        <div class="count-fonts"><span class="counter">50 </span>+</div>
-                        <p>Complete Project</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- =====>> End We Always Counter <<===== 
-    =========================== -->
-    <!-- ===========================
-    =====>> Testimonial <<===== -->
-    <section id="testimonial-area" class="testimonial-six-area background-color-7 pt-130 pb-130">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 col-md-6">
-                    <div class="testimonial-six-contents section-content text-center">
-                        <h3>Testimonial</h3>
-                        <h2 class="section-title">What customer say</h2>
-                        <div class="section-border"><span></span></div>
-                    </div>
-                    <div class="testimonial-left-six-text">
-                        <p>Testimonials are one of the most important as decding on if they want to use your product or for a cool way to add them to your site.</p>
-                        <a href="testimonial.html" class="btn-m11">Read More</a>
-                    </div>
-                </div>
-                <div class="col-lg-8 col-md-6">
-                    <div class="testimonial-slider owl-carousel owl-theme">
-                        <div class="testimonial-item-six">
-                            <img src="{{ asset('frontend') }}/img/home-6/h6-testimonial-small1.png" alt="">
-                            <div class="testimonial-six-text">
-                                <p>Proactively syndicate open-so rceie marketis after lowrisk hig yield synergy. Professionally as plfy visionary technology befo team driven sources.</p>
-                                <h3>Atidra Row</h3>
-                                <span>CEO Of Niketons</span>
-                            </div>
-                        </div>
-                        <div class="testimonial-item-six">
-                            <img src="{{ asset('frontend') }}/img/home-6/h6-testimonial-small2.png" alt="">
-                            <div class="testimonial-six-text">
-                                <p>Proactively syndicate open-so rceie marketis after lowrisk hig yield synergy. Professionally as plfy visionary technology befo team driven sources.</p>
-                                <h3>Atidra Row</h3>
-                                <span>CEO Of Niketons</span>
-                            </div>
-                        </div>
-                        <div class="testimonial-item-six">
-                            <img src="{{ asset('frontend') }}/img/home-6/h6-testimonial-small1.png" alt="">
-                            <div class="testimonial-six-text">
-                                <p>Proactively syndicate open-so rceie marketis after lowrisk hig yield synergy. Professionally as plfy visionary technology befo team driven sources.</p>
-                                <h3>Atidra Row</h3>
-                                <span>CEO Of Niketons</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- =====>> End Testimonial <<===== 
-    =========================== -->
-    <!-- ===========================
-    =====>> Blog <<===== -->
-    <section id="blog-area" class="blog-area-six blog-area background-color-3 pt-130 pb-130">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 offset-lg-3">
-                    <div class="section-content text-center">
-                        <h3>Recent Blog</h3>
-                        <h2 class="section-title">Create a blog and share your Post</h2>
-                        <div class="section-border"><span></span></div>
-                    </div>
-                </div>
-            </div>
-            <div class="row pt-40">
-                <div class="col-lg-4 col-md-6 mt-30">
-                    <div class="single-blog-wrapper-six">
-                        <div class="blog-six-link">
-                            <a href="blog-details.html" class="single-blog-six">
-                                <img src="{{ asset('frontend') }}/img/home-5/h5-blog1.png" alt="">
-                            </a>
-                            <p>March 03 20</p>
-                            <a href="#"><i class="fas fa-link"></i></a>
-                        </div>
-                        <div class="blog-six-left-right">
-                            <a href="blog-details.html" class="blog-single-text-six">
-                                <h3>How to start your business as an entrepreneur</h3>
-                                <p>Consectetur adipiscing elit, sed do eius mod tempor incididunt.</p>
-                            </a>
-                            <div class="blog-images-text">
-                                <img src="{{ asset('frontend') }}/img/home-4/blog-small1.png" alt="">
-                                <p>by Admin</p>
-                                <i class="far fa-clock"></i>
-                                <p>March 03 2020</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mt-30">
-                    <div class="single-blog-wrapper-six">
-                        <div class="blog-six-link">
-                            <a href="blog-details.html" class="single-blog-six">
-                                <img src="{{ asset('frontend') }}/img/home-5/h5-blog2.png" alt="">
-                            </a>
-                            <p>March 03 20</p>
-                            <a href="#"><i class="fas fa-link"></i></a>
-                        </div>
-                        <div class="blog-six-left-right">
-                            <a href="blog-details.html" class="blog-single-text-six">
-                                <h3>How to start your business as an entrepreneur</h3>
-                                <p>Consectetur adipiscing elit, sed do eius mod tempor incididunt.</p>
-                            </a>
-                            <div class="blog-images-text">
-                                <img src="{{ asset('frontend') }}/img/home-4/blog-small1.png" alt="">
-                                <p>by Admin</p>
-                                <i class="far fa-clock"></i>
-                                <p>March 03 2020</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mt-30">
-                    <div class="single-blog-wrapper-six">
-                        <div class="blog-six-link">
-                            <a href="blog-details.html" class="single-blog-six">
-                                <img src="{{ asset('frontend') }}/img/home-5/h5-blog3.png" alt="">
-                            </a>
-                            <p>March 03 20</p>
-                            <a href="#"><i class="fas fa-link"></i></a>
-                        </div>
-                        <div class="blog-six-left-right">
-                            <a href="blog-details.html" class="blog-single-text-six">
-                                <h3>How to start your business as an entrepreneur</h3>
-                                <p>Consectetur adipiscing elit, sed do eius mod tempor incididunt.</p>
-                            </a>
-                            <div class="blog-images-text">
-                                <img src="{{ asset('frontend') }}/img/home-4/blog-small1.png" alt="">
-                                <p>by Admin</p>
-                                <i class="far fa-clock"></i>
-                                <p>March 03 2020</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- =====>> End Blog <<===== 
-    =========================== -->
+                </li>
+                <!-- Slide 1 -->
+                <li data-index="rs-2" data-transition="zoomout">
+                    <!-- MAIN IMAGE -->
+                    <img src="{{ asset('frontend') }}/images/main-slider/2.jpg" alt="" class="rev-slidebg">
 
-    <!-- ===========================
-    =====>> Discover Niketion <<===== -->
-    <section id="discover-niketion" class="discover-niketion-area4 jarallax pt-130 pb-130">
-        <div class="container">
+                    <div class="tp-caption" 
+                    data-paddingbottom="[15,15,15,15]"
+                    data-paddingleft="[15,15,15,15]"
+                    data-paddingright="[15,15,15,15]"
+                    data-paddingtop="[0,0,0,0]"
+                    data-responsive_offset="on"
+                    data-type="text" data-height="none"
+                    data-width="['900','900','750','450']"
+                    data-whitespace="normal"
+                    data-hoffset="['0','0','0','0']"
+                    data-voffset="['-20','-20','-20','0']"
+                    data-x="['left','left','left','left']"
+                    data-y="['middle','middle','middle','middle']"
+                    data-textalign="['top','top','top','top']"
+                    data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'>
+                        <h1>The Right digital agency.</h1>
+                    </div>
+
+                    <div class="tp-caption" 
+                    data-paddingbottom="[15,15,15,15]"
+                    data-paddingleft="[15,15,15,15]"
+                    data-paddingright="[15,15,15,15]"
+                    data-paddingtop="[0,0,0,0]"
+                    data-responsive_offset="on"
+                    data-type="text" data-height="none"
+                    data-width="['750','750','750','450']"
+                    data-whitespace="normal"
+                    data-hoffset="['0','0','0','0']"
+                    data-voffset="['105','105','105','105']"
+                    data-x="['left','left','left','left']"
+                    data-y="['middle','middle','middle','middle']"
+                    data-textalign="['top','top','top','top']"
+                    data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'>
+                        <p class="text">You have better things to do than worry about your business</p>
+                    </div>
+
+                    <div class="tp-caption" data-paddingbottom="[0,0,0,0]"
+                    data-paddingleft="[15,15,15,15]"
+                    data-paddingright="[15,15,15,15]"
+                    data-paddingtop="[0,0,0,0]"
+                    data-responsive_offset="on"
+                    data-type="text" data-height="none"
+                    data-width="['700','750','700','450']"
+                    data-whitespace="normal"
+                    data-hoffset="['0','0','0','0']"
+                    data-voffset="['180','180','180','200']"
+                    data-x="['left','left','left','left']"
+                    data-y="['middle','middle','middle','middle']"
+                    data-textalign="['top','top','top','top']"
+                    data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'>
+                        <a href="page-about.html" class="theme-btn btn-style-one hover-light"><span class="btn-title">Discover More</span></a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+<!-- End Main Slider-->
+
+<!-- Features Section -->
+<section class="features-section">
+    <div class="bg bg-pattern-1"></div>
+    <div class="auto-container">
+
+        <div class="row">
+            <!-- Feature Block -->
+            @foreach ($achieves->take(3) as $achieve)
+            <div class="feature-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
+                <div class="inner-box">
+                    
+                    <div class="content-box">
+                        <h2 class="pt-3">{{ $achieve->total }}</h2>
+                        <h5 class="title pb-4">{{ $achieve->title }}</h5>
+                        <div class="icon-box"><i><img src="{{ asset('uploads/achieve') }}/{{ $achieve->icon }}" alt=""></i></div>
+                    </div>
+                </div>
+            </div>
+            @endforeach
+            
+        </div>
+    </div>
+</section>
+<!-- End Features Section -->
+
+<!-- About Section -->
+@foreach ($abouts as $about)
+<section class="about-section pt-0">
+    <div class="auto-container">
+        <div class="row">
+            <!-- Content Column -->
+            <div class="content-column col-lg-6 col-md-12 col-sm-12 order-2 wow fadeInRight">
+                <div class="inner-column">
+                    <div class="sec-title">
+                        <span class="sub-title">{{ $about->first()->subtitle }}</span>
+                        <h2>{{ $about->first()->title }}</h2>
+                        <div class="text">{!! $about->first()->description !!}</div>
+                    </div>
+
+                    <div class="other-info">
+                        
+                        <a href="{{ route('about_us') }}" class="theme-btn btn-style-one dark-bg"><span class="btn-title">About Us</span></a>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Image Column -->
+            <div class="image-column col-lg-6 col-md-12 col-sm-12 wow fadeInLeft" data-wow-delay="600ms">
+                <div class="image-box">
+                    <span class="icon-shpaes zoom-one"></span>
+                    <figure class="image wow fadeIn"><img src="{{ asset('uploads/about') }}/{{ $about->first()->image }}" alt=""></figure>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+@endforeach
+<!-- End About Section -->
+
+<!-- Services Section -->
+<section class="services-section">
+    <div class="bg bg-pattern-2"></div>
+    <div class="auto-container">
+        <div class="sec-title">
             <div class="row">
-                <div class="col-lg-12">
-                    <div class="discover-niketion-text">
-                        <h2>Discover Niketion. It's easier than you think.</h2>
-                        <p>Progressively deliver market-driven quality vectors rather than goal-oriented niche markets.
-                        </p>
-                        <a href="#" class="btn-m12">Buy Roktim $11 Only</a>
+                <div class="col-lg-7">
+                    <span class="sub-title">our services</span>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="row">
+            <!--  Services Column -->
+            <div class="services-column col-lg-12 col-md-12 col-sm-12 wow fadeInUp">
+                <div class="inner-column">
+                    <div class="row">
+                        <!-- Service Block -->
+                        @foreach ($services->take(6) as $sl=>$service)
+                        <div class="service-block col-lg-4 col-md-4 col-sm-6">
+                            <div class="inner-box">
+                                <div class="icon-box">
+                                    <span class="count">{{ $sl+1 }}</span>
+                                    <i ><img class="py-3" src="{{ asset('uploads/service') }}/{{ $service->icon }}" alt=""></i>
+                                </div>
+                                <h5 class="title py-3"><a>{{ $service->title }}</a></h5>
+                                <p>{{ $service->sort_desp }}</p>
+                            </div>
+                        </div>                        
+                        @endforeach
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!--End services-section-->
+
+<!-- Projects Section -->
+<section class="projects-section pb-0">
+    <div class="auto-container">
+        <div class="sec-title text-center">
+            <span class="sub-title">Gallery</span>
+        </div>
+
+        <div class="outer-box">
+            <div class="row">
+                <!-- Project Block -->
+                @foreach ($gallerys as $gallery)
+                <div class=" project-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
+                    <div class="inner-box">
+                        <div class="image-box">
+                            <figure class="image"><a><img src="{{ asset('uploads/gallery') }}/{{ $gallery->image }}" alt=""></a></figure>
+                        </div>
+                        <div class="content-box">
+                            <a href="page-project-details.html" class="icon"><i class="fa fa-long-arrow-alt-right"></i></a>
+                            <span class="cat">{{ $gallery->address }}</span>
+                            <h4 class="title"><a href="page-project-details.html" title="">{{ $gallery->title }}</a></h4>
+                        </div>
+                    </div>
+                </div>
+                @endforeach
+            </div>
+        </div>
+    </div>
+</section>
+<!--End projects-section-->
+
+<!-- Clients Section -->
+<section class="clients-section pull-up">
+    <div class="auto-container">
+        <!-- Sponsors Outer -->
+        <div class="sponsors-outer">
+            <!--clients carousel-->
+
+            <ul class="clients-carousel owl-carousel owl-theme">
+                @foreach ($clients as $client)
+                    <li class="client-block"> <a ><img src="{{ asset('uploads/client') }}/{{ $client->image }}" alt=""></a> </li>
+                @endforeach
+            </ul>
+        </div>
+    </div>
+</section>
+<!--End Clients Section -->
+
+<!-- Fun Fact Section -->
+<section class="fun-fact-section pb-0">
+    <div class="bg bg-image" style="background-image: url({{ asset('frontend') }}/images/background/1.jpg)"></div>
+    <div class="bg bg-lines"></div>
+    
+    <div class="auto-container">
+        <div class="fact-counter">
+            <div class="row">
+                <!-- Counter block-->
+                @foreach ($achieves->take(4) as $achieve)
+                <div class="counter-block col-lg-3 col-md-6 col-sm-12 wow fadeInUp">
+                    <div class="inner">
+                        <div class="icon-box"><i><img src="{{ asset('uploads/achieve') }}/{{ $achieve->icon }}" alt=""></i></div>
+                        <div class="count-box"><span class="count-text" data-speed="3000" data-stop="{{ $achieve->total }}">0</span></div>
+                        <h4 class="counter-title">{{ $achieve->title }}</h4>
+                    </div>
+                </div>
+                @endforeach
+        
+            </div>
+        </div>
+
+        <div class="call-to-action pull-down">
+            <div class="outer-box">
+                <div class="bg bg-pattern-3"></div>
+                <div class="title-box">
+                    <h3 class="title">Let see our all service.</h3>
+                    <a href="{{ route('services') }}" title="" class="theme-btn btn-style-one dark-bg hover-light"><span class="btn-title">Service</span></a>
+                </div>
+                <div class="image-box">
+                    <span class="icon icon-bulb"></span>
+                    <figure class="image"><img src="{{ asset('frontend') }}/images/resource/woman.png" alt=""></figure>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Fun Fact Section -->
+
+<!-- Testimonial Section -->
+<section class="testimonial-section">
+    <div class="bg bg-lines"></div>
+    <div class="auto-container">
+        <div class="row">
+            <!-- Title Column -->
+            <div class="title-column col-lg-5 col-md-12">
+                <div class="inner-column">
+                    <div class="sec-title">
+                        <span class="sub-title">our testimonials</span>
+                        <h2>What They’re Talking About us.</h2>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial Column -->
+            <div class="testimonial-column col-lg-7 col-md-12">
+                <div class="inner-column">
+                    <div class="testimonial-carousel owl-carousel default-navs">
+                        <!-- Testimonial Block -->
+                        @foreach ($customerSays as $customerSay)
+                        <div class="testimonial-block">
+                            <div class="inner-box">
+                                <div class="content-box">
+                                    <div class="text">{!! $customerSay->description !!}</div>
+                                </div>
+                                <div class="info-box">
+                                    <figure class="thumb"><img src="{{ asset('uploads/customersay') }}/{{ $customerSay->image }}" alt=""></figure>
+                                    <h5 class="name">{{ $customerSay->name }}</h5>
+                                    <span class="designation">{{ $customerSay->post }}</span>
+                                </div>
+                            </div>
+                        </div>
+                        @endforeach
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-    <!-- =====>> End Discover Niketion <<===== 
-    =========================== -->
+    </div>
+</section>
+<!-- End Testimonial Section -->
+
+<!-- Team Section -->
+<section class="team-section">
+    <div class="bg bg-pattern-4"></div>
+    <div class="auto-container">
+        <div class="sec-title text-center">
+            <span class="sub-title">professional people</span>
+            <h2>Meet Our Expert Team <br>Members.</h2>
+        </div>
+        
+        <div class="row">
+            <!-- Team Block -->
+            @foreach ($teams as $team)
+            <div class="team-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
+                <div class="inner-box">
+                    <div class="image-box">
+                        <figure class="image"><a href="page-team-details.html"><img src="{{ asset('uploads/team') }}/{{ $team->image }}" alt=""></a></figure>
+                        
+                    </div>
+                    <div class="info-box">
+                        <h5 class="name"><a href="page-team-details.html" title="">{{ $team->name }}</a></h5>
+                        <span class="designation">{{ $team->post }}</span>
+                    </div>
+                </div>
+            </div>
+            @endforeach
+        </div>
+    </div>
+</section>
+<!-- End Team Section -->
+
+<!-- Contact Section -->
+<section class="contact-section">
+    <div class="bg-outer">
+        <div class="bg bg-pattern-5"></div>
+    </div>
+    <div class="auto-container">
+        <div class="row">
+            <!-- Contact Column -->
+            <div class="contact-column col-lg-8 col-md-12 col-sm-12">
+                <div class="inner-column">
+                    <div class="sec-title light">
+                        <span class="sub-title">contact us</span>
+                        <h2>Drop us a Line.</h2>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="contact-form wow fadeInLeft">
+                        <!--Contact Form-->
+                        <form method="POST" action="{{ route('customerMessage.store') }}" id="contact-form">
+                            <div class="row">
+                                <div class="form-group col-lg-6 col-md-12 col-sm-12">
+                                    <input type="text" name="name" placeholder="Full name" value="{{ old('name') }}" required>
+                                </div>
+                    
+                                <div class="form-group col-lg-6 col-md-12 col-sm-12">
+                                    <input type="email" name="email" placeholder="Email address" value="{{ old('email') }}" required>
+                                </div>
+                    
+                                <div class="form-group col-lg-6 col-md-12 col-sm-12">
+                                    <input type="text" name="phone" placeholder="Phone number" value="{{ old('phone') }}" required>
+                                </div>
+
+                                <div class="form-group col-lg-6 col-md-12 col-sm-12">
+                                    <input type="text" name="subject" placeholder="Subject" value="{{ old('subject') }}" required>
+                                </div>
+
+                                <div class="form-group col-lg-12">
+                                    <textarea name="message" placeholder="Write message" required>{{ old('message') }}</textarea>
+                                </div>
+                
+                                <div class="form-group col-lg-12">
+                                    <button class="theme-btn btn-style-one" type="submit"><span class="btn-title">Send a message</span></button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <!--End Contact Form -->
+                </div>
+
+                <div class="contact-info">
+                    <span class="title">Call us anytime:</span>
+                    @if ($settings->first()->number != null)
+                        <a href="tel:{{ $settings->first()->number }}" class="info">{{ $settings->first()->number }}</a>
+                    @endif
+                </div>
+            </div>
+
+            <!-- Map Column -->
+            <div class="map-column col-lg-4 col-md-12">
+                <div class="inner-column">
+                    <iframe class="map" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=1%20Grafton%20Street,%20Dublin,%20Ireland+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- News Section -->
+<section class="news-section">
+    <div class="auto-container">
+        <div class="sec-title text-center">
+            <span class="sub-title">From the Blog</span>
+            <h2>Latest News & <br>Articles from the Blog.</h2>
+        </div>
+
+        <div class="row">
+            <!-- News Block -->
+            <div class="news-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
+                <div class="inner-box">
+                    <div class="image-box">
+                        <figure class="image"><a href="news-details.html"><img src="{{ asset('frontend') }}/images/resource/news-1.jpg" alt=""></a></figure>
+                        <span class="date">20 Mar, 2023</span>
+                    </div>
+                    <div class="content-box">
+                        <div class="author-info">
+                            <div class="author-thumb"><img src="{{ asset('frontend') }}/images/resource/avatar1.jpg" alt=""></div>
+                            <span class="author-name">by Mike Hardson</span>
+                        </div>
+                        <h5 class="title"><a href="news-details.html" title="">Five Ways that can Develop your Business Website</a></h5>
+                        <div class="text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem…</div>
+                        <ul class="post-info">
+                            <li class="read-more"><a href="news-details.html" title=""><i class="fa fa-long-arrow-alt-right"></i> More</a></li>
+                            <li class="comments"><a href="#" title=""><i class="fa fa-comments color1"></i> 2 Comments</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- News Block -->
+            <div class="news-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="300ms">
+                <div class="inner-box">
+                    <div class="image-box">
+                        <figure class="image"><a href="news-details.html"><img src="{{ asset('frontend') }}/images/resource/news-2.jpg" alt=""></a></figure>
+                        <span class="date">20 Mar, 2023</span>
+                    </div>
+                    <div class="content-box">
+                        <div class="author-info">
+                            <div class="author-thumb"><img src="{{ asset('frontend') }}/images/resource/avatar1.jpg" alt=""></div>
+                            <span class="author-name">by Mike Hardson</span>
+                        </div>
+                        <h5 class="title"><a href="news-details.html" title="">Five Ways that can Develop your Business Website</a></h5>
+                        <div class="text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem…</div>
+                        <ul class="post-info">
+                            <li class="read-more"><a href="news-details.html" title=""><i class="fa fa-long-arrow-alt-right"></i> More</a></li>
+                            <li class="comments"><a href="#" title=""><i class="fa fa-comments color1"></i> 2 Comments</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- News Block -->
+            <div class="news-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="600ms">
+                <div class="inner-box">
+                    <div class="image-box">
+                        <figure class="image"><a href="news-details.html"><img src="{{ asset('frontend') }}/images/resource/news-3.jpg" alt=""></a></figure>
+                        <span class="date">20 Mar, 2023</span>
+                    </div>
+                    <div class="content-box">
+                        <div class="author-info">
+                            <div class="author-thumb"><img src="{{ asset('frontend') }}/images/resource/avatar1.jpg" alt=""></div>
+                            <span class="author-name">by Mike Hardson</span>
+                        </div>
+                        <h5 class="title"><a href="news-details.html" title="">Five Ways that can Develop your Business Website</a></h5>
+                        <div class="text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem…</div>
+                        <ul class="post-info">
+                            <li class="read-more"><a href="news-details.html" title=""><i class="fa fa-long-arrow-alt-right"></i> More</a></li>
+                            <li class="comments"><a href="#" title=""><i class="fa fa-comments color1"></i> 2 Comments</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
 @endsection

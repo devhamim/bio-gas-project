@@ -1,11 +1,14 @@
 <?php
 
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\AchieveController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\clientsController;
+use App\Http\Controllers\CustomerMessageController;
 use App\Http\Controllers\CustomerSayController;
 use App\Http\Controllers\FeatureController;
 use App\Http\Controllers\FrontendController;
+use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PortfolioController;
 use App\Http\Controllers\PricingController;
@@ -39,6 +42,9 @@ Route::get('/services', [FrontendController::class, 'services'])->name('services
 Route::get('/our-portfolio', [FrontendController::class, 'our_portfolio'])->name('our.portfolio');
 Route::get('/our-blog', [FrontendController::class, 'our_blog'])->name('our.blog');
 Route::get('/contect', [FrontendController::class, 'contect'])->name('contect');
+Route::get('/gallerys', [FrontendController::class, 'gallerys'])->name('gallerys');
+Route::get('/our/team', [FrontendController::class, 'our_team'])->name('our.team');
+Route::get('/our/clients', [FrontendController::class, 'our_clients'])->name('our.clients');
 
 Auth::routes();
 
@@ -57,4 +63,7 @@ Route::get('/home', [HomeController::class, 'index'])->name('index');
             'service'      => ServiceController::class,
             'pricing'      => PricingController::class,
             'privacyPolicy'=> PrivacyPolicyController::class,
+            'gallery'      => GalleryController::class,
+            'achieve'      => AchieveController::class,
+            'customerMessage'=> CustomerMessageController::class,
         ]);

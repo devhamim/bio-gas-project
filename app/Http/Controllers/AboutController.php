@@ -82,7 +82,7 @@ class AboutController extends Controller
         $rules = [
             'subtitle'      =>'required',
             'title'         =>'required',
-            'image'         =>'required',
+            'image'         =>'',
             'description'   =>'required',
             'define'        =>'required',
             'status'        =>'required',

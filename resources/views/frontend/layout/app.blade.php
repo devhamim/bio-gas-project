@@ -1,69 +1,76 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>{{ $setting->first()->title }}</title>
+<meta charset="utf-8">
+<title>Bio Gas</title>
+<!-- Stylesheets -->
+<link href="{{ asset('frontend') }}/css/bootstrap.min.css" rel="stylesheet">
+<link href="{{ asset('frontend') }}/plugins/revolution/css/settings.css" rel="stylesheet" type="text/css"><!-- REVOLUTION SETTINGS STYLES -->
+<link href="{{ asset('frontend') }}/plugins/revolution/css/layers.css" rel="stylesheet" type="text/css"><!-- REVOLUTION LAYERS STYLES -->
+<link href="{{ asset('frontend') }}/plugins/revolution/css/navigation.css" rel="stylesheet" type="text/css"><!-- REVOLUTION NAVIGATION STYLES -->
+<link href="{{ asset('frontend') }}/css/style.css" rel="stylesheet">
 
-    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('uploads/setting') }}/{{ $setting->first()->favicon }}">
+<link rel="shortcut icon" href="{{ asset('frontend') }}/images/favicon.png" type="image/x-icon">
+<link rel="icon" href="{{ asset('frontend') }}/images/favicon.png" type="image/x-icon">
 
-    <link rel="stylesheet" href="{{ asset('frontend') }}/css/all.min.css">
-    <link rel="stylesheet" href="{{ asset('frontend') }}/css/bootstrap.min.css">
-    <link rel="stylesheet" href="{{ asset('frontend') }}/css/lightgallery.min.css">
-    <link rel="stylesheet" href="{{ asset('frontend') }}/css/bsnav.min.css">
-    <link rel="stylesheet" href="{{ asset('frontend') }}/css/carousel.min.css">
-    <link rel="stylesheet" href="{{ asset('frontend') }}/css/style.css">
-    <link rel="stylesheet" href="{{ asset('frontend') }}/css/responsive.css">
+<!-- Responsive -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
+<!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
 </head>
 
 <body>
 
-    <!-- ===========================
-    =====>> Top Preloader <<===== -->
-    <div id="preloader">
-        <div class="lds-css">
-            <div class="preloader-3">
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </div>
-    <!-- =====>> End Top Preloader <<===== 
-    =========================== -->
-
-   @include('frontend.layout.header')
-
-    {{-- main start --}}
+<div class="page-wrapper">
+	
+	<!-- Preloader -->
+	<div class="preloader"></div>
+	
+	<!-- Main Header-->
+	@include('frontend.layout.header')
+	<!--End Main Header -->
+	
+	{{-- main start --}}
     @yield('content')
-    {{-- main end --}}
+	{{-- main end --}}
 
-    @include('frontend.layout.footer')
+	<!-- Main Footer -->
+	@include('frontend.layout.footer')
+	<!--End Main Footer -->
 
-    <!-- ===========================
-    =====>> Scroll Top <<===== -->
-    <a href="#" class="scroll-top show" id="scroll-top">
-        <i class="arrow-top fal fa-long-arrow-up"></i>
-        <i class="arrow-bottom fal fa-long-arrow-up"></i>
-    </a>
-    <!-- =====>> End Scroll Top <<===== 
-    =========================== -->
+</div><!-- End Page Wrapper -->
 
-    <!-- ===========================
-    =====>> Jquery <<===== -->
+<!-- Scroll To Top -->
+<div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-angle-up"></span></div>
 
-    <script src="{{ asset('frontend') }}/js/jquery-3.4.1.min.js"></script>
-    <script src="{{ asset('frontend') }}/js/bootstrap.min.js"></script>
-    <script src="{{ asset('frontend') }}/js/plugin.min.js"></script>
-    <script src="{{ asset('frontend') }}/js/lightgallery-all.min.js"></script>
-    <script src="{{ asset('frontend') }}/js/carousel.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCe2q1gFSd75jKUnTDPq0nZWaMlEu6vL30"></script>
-    <script src="{{ asset('frontend') }}/js/bsnav.min.js"></script>
-    <script src="{{ asset('frontend') }}/js/roktim.js"></script>
-
-    <!-- =====>> End Jquery <<===== 
-    =========================== -->
-
+<script src="{{ asset('frontend') }}/js/jquery.js"></script> 
+<script src="{{ asset('frontend') }}/js/popper.min.js"></script>
+<!--Revolution Slider-->
+<script src="{{ asset('frontend') }}/plugins/revolution/js/jquery.themepunch.revolution.min.js"></script>
+<script src="{{ asset('frontend') }}/plugins/revolution/js/jquery.themepunch.tools.min.js"></script>
+<script src="{{ asset('frontend') }}/plugins/revolution/js/extensions/revolution.extension.actions.min.js"></script>
+<script src="{{ asset('frontend') }}/plugins/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
+<script src="{{ asset('frontend') }}/plugins/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+<script src="{{ asset('frontend') }}/plugins/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+<script src="{{ asset('frontend') }}/plugins/revolution/js/extensions/revolution.extension.migration.min.js"></script>
+<script src="{{ asset('frontend') }}/plugins/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+<script src="{{ asset('frontend') }}/plugins/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+<script src="{{ asset('frontend') }}/plugins/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+<script src="{{ asset('frontend') }}/plugins/revolution/js/extensions/revolution.extension.video.min.js"></script>
+<script src="{{ asset('frontend') }}/js/main-slider-script.js"></script>
+<!--Revolution Slider-->
+<script src="{{ asset('frontend') }}/js/bootstrap.min.js"></script>
+<script src="{{ asset('frontend') }}/js/jquery.fancybox.js"></script>
+<script src="{{ asset('frontend') }}/js/wow.js"></script>
+<script src="{{ asset('frontend') }}/js/appear.js"></script>
+<script src="{{ asset('frontend') }}/js/select2.min.js"></script>
+<script src="{{ asset('frontend') }}/js/owl.js"></script>
+<script src="{{ asset('frontend') }}/js/script.js"></script>
 </body>
+
+<!-- Mirrored from kodesolution.com/html/2023/disle-html/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 24 Oct 2023 07:18:24 GMT -->
 </html>

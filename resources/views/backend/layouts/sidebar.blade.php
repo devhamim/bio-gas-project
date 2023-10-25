@@ -30,6 +30,12 @@
                         <a href="{{ route('client.index') }}" class="sidebar-link"><span class="nav-icon"><i class="fa-light fa-calendar"></i></span> <span class="sidebar-txt">Clients</span></a>
                     </li>
                     <li class="sidebar-dropdown-item">
+                        <a href="{{ route('gallery.index') }}" class="sidebar-link"><span class="nav-icon"><i class="fa-light fa-calendar"></i></span> <span class="sidebar-txt">Gallery</span></a>
+                    </li>
+                    <li class="sidebar-dropdown-item">
+                        <a href="{{ route('achieve.index') }}" class="sidebar-link"><span class="nav-icon"><i class="fa-light fa-calendar"></i></span> <span class="sidebar-txt">Achieve</span></a>
+                    </li>
+                    <li class="sidebar-dropdown-item">
                         <a href="{{ route('service.index') }}" class="sidebar-link"><span class="nav-icon"><i class="fa-light fa-file-invoice"></i></span> <span class="sidebar-txt">Service</span></a>
                     </li>
                     <li class="sidebar-dropdown-item">

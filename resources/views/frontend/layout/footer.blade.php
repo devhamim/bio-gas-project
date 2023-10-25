@@ -1,82 +1,141 @@
+<footer class="main-footer">
+    <div class="bg bg-pattern-6"></div>
+    <!-- Footer Uppper -->
+    <div class="footer-upper">
+        <div class="auto-container">
+            <div class="row">
+                <!-- Contact info Block -->
+                <div class="contact-info-block col-lg-4 col-md-6">
+                    <div class="inner">
+                        <i class="icon lnr-icon-map"></i>
+                        <div class="text">{{ $setting->first()->address }}</div>
+                    </div>
+                </div>
+                <!-- Contact info Block -->
+                <div class="contact-info-block col-lg-4 col-md-6">
+                    <div class="inner">
+                        <i class="icon lnr-icon-envelope1"></i>
+                        <div class="text">
+                            <a href="#">{{ $setting->first()->email }}</a>
+                            <a href="tel:{{ $setting->first()->number }}">{{ $setting->first()->number }}</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Contact info Block -->
+                <div class="contact-info-block col-lg-4 col-md-6">
+                    <div class="inner">
+                        <i class="icon lnr-icon-clock"></i>
+                        <div class="text">Mon - Sat: 8:00 am to 6:00 pm <br>Sunday: CLOSED</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <!-- ===========================
-    =====>> Footer <<===== -->
-    <footer class="footer-area">
-        <div class="footer-content background-footer-three pt-100 pb-100">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-3 col-md-6 footer-col">
-                        <div class="footer-content-item">
-                            <img style="max-width: 150px" class="mb-5" src="{{ asset('uploads/setting') }}/{{ $setting->first()->footer_logo }}" alt=""></a>
-                            <p>{{ $setting->first()->about }}</p>
-                            <ul>
-                                <li><a href="#"> Privacy policy </a></li>
-                                <li><a href="#">Terms and Conditions</a></li>
+    <!-- Widgets Section -->
+    <div class="widgets-section">
+        <div class="auto-container">
+            <div class="row">
+                <!-- Footer COlumn -->
+                <div class="footer-column col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                    <div class="footer-widget about-widget">
+                        <h5 class="widget-title">About</h5>
+                        <div class="widget-content">
+                            <div class="text">{{ $setting->first()->about }}</div>
+                            <ul class="social-icon-two">
+                                <li><a href="{{ $setting->first()->twitter }}"><span class="fab fa-twitter"></span></a></li>
+                                <li><a href="{{ $setting->first()->facebook }}"><span class="fab fa-facebook-square"></span></a></li>
+                                <li><a href="{{ $setting->first()->linkedin }}"><span class="fab fa-linkedin"></span></a></li>
+                                <li><a href="{{ $setting->first()->instagram }}"><span class="fab fa-instagram"></span></a></li>
                             </ul>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6 footer-col">
-                        <div class="footer-content-item ">
-                            <a class="footer-widget-title">Useful Links</a>
-                            <ul>
-                                <li><a href="#">Home</a></li>
-                                <li><a href="#">About Client</a></li>
-                                <li><a href="#">Conditions</a></li>
-                                <li><a href="#">Services</a></li>
-                                <li><a href="#">Contact Us</a></li>
-                                <li><a href="#">History</a></li>
-                            </ul>
+                </div>
+                
+                <!-- Footer COlumn -->
+                <div class="footer-column col-xl-2 col-lg-2 col-md-6 col-sm-12">
+                    <div class="widget links-widget">
+                        <h6 class="widget-title">Explore</h6>
+                        <div class="widget-content">
+                            <ul class="user-links">
+                                <li><a href="{{ route('our.team') }}">Meet the Team</a></li>
+                                <li><a href="{{ route('services') }}">Our Services</a></li>
+                                <li><a href="{{ route('our.blog') }}">Blogs</a></li>
+                                <li><a href="{{ route('about_us') }}">About Us</a></li>
+                                <li><a href="{{ route('contect') }}">Contact</a></li>
+                            </ul>                                
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6 footer-col">
-                        <div class="footer-content-item">
-                            <a class="footer-widget-title">Company</a>
-                            <ul>
-                                <li><a href="#">Jobs</a></li>
-                                <li><a href="#">Press & Blog</a></li>
-                                <li><a href="#">Content Management</a></li>
-                                <li><a href="#">Company</a></li>
-                                <li><a href="#">Pricing</a></li>
-                                <li><a href="#">Tracking</a></li>
-                            </ul>
+                </div>
+
+
+                <!-- Footer COlumn -->
+                <div class="footer-column col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                    <div class="widget gallery-widget">
+                        <h6 class="widget-title">Projects</h6>
+                        <div class="widget-content">
+                            <div class="outer">
+                                <figure class="image">
+                                    <a href="#"><img src="images/resource/project-thumb-1.jpg" alt=""></a>
+                                </figure>
+                                <figure class="image">
+                                    <a href="#"><img src="images/resource/project-thumb-2.jpg" alt=""></a>
+                                </figure>
+                                <figure class="image">
+                                    <a href="#"><img src="images/resource/project-thumb-3.jpg" alt=""></a>
+                                </figure>
+                                <figure class="image">
+                                    <a href="#"><img src="images/resource/project-thumb-4.jpg" alt=""></a>
+                                </figure>
+                                <figure class="image">
+                                    <a href="#"><img src="images/resource/project-thumb-5.jpg" alt=""></a>
+                                </figure>
+                                <figure class="image">
+                                    <a href="#"><img src="images/resource/project-thumb-6.jpg" alt=""></a>
+                                </figure>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6 footer-col">
-                        <div class="footer-content-item">
-                            <a class="footer-widget-title">Main Office</a>
-                            <p>4012 North 9th Avenue,Pensacola, FL 32503, New York</p>
-                            <div class="footer-contact">
-                                Call: +1 965 047 658 23
-                                <br>Email: niketons@gmail.com
+                </div>
+                
+                <!-- Footer COlumn -->
+                <div class="footer-column col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                    <div class="widget newsletter-widget">
+                        <h6 class="widget-title">Newsletter</h6>
+                        <div class="widget-content">
+                            <div class="text">Subscribe our newsletter to get our latest update & news</div>
+                            <div class="subscribe-form">
+                                <form method="post" action="#">
+                                    <div class="form-group">
+                                        <input type="email" name="email" class="email" value="" placeholder="Email Address" required="">
+                                        <button type="button" class="theme-btn"><i class="fa fa-paper-plane"></i></button>
+                                    </div>
+                                </form>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="copy-right-area">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="copy-right-text">
-                            <p>Copyrights © 2020. All rights reserved by Pointtheme</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="footer-social text-right">
-                            <div class="footer-social-title">Follow us: </div>
-                            <ul>
-                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                                <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
-                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
+    </div>
+
+    <!--  Footer Bottom -->
+    <div class="footer-bottom">
+        <div class="auto-container">
+            <div class="row">
+                <div class="logo-column col-lg-4 col-md-4 order-2">
+                    <div class="footer-logo"><img src="images/logo.png" alt=""></div>
+                </div>
+                <div class="links-column col-lg-4 col-md-4 order-3">
+                    <ul class="footer-links">
+                        <li><a href="#">Terms of Use</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <p class="copyright-text">© Copyright 2023 by Company.com</p>
                 </div>
             </div>
         </div>
-    </footer>
-    <!-- =====>> End Footer <<===== 
-    =========================== -->
+    </div>
+</footer>
