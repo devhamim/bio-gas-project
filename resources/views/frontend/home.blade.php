@@ -404,7 +404,8 @@
                     <!-- Contact Form -->
                     <div class="contact-form wow fadeInLeft">
                         <!--Contact Form-->
-                        <form method="POST" action="{{ route('customerMessage.store') }}" id="contact-form">
+                        <form method="POST" action="{{ route('customerMessage.store') }}">
+                            @csrf
                             <div class="row">
                                 <div class="form-group col-lg-6 col-md-12 col-sm-12">
                                     <input type="text" name="name" placeholder="Full name" value="{{ old('name') }}" required>

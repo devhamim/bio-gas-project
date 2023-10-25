@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\customerMessage;
 use Illuminate\Http\Request;
 
 class CustomerMessageController extends Controller
@@ -11,7 +12,10 @@ class CustomerMessageController extends Controller
      */
     public function index()
     {
-        //
+        $customerMessages = customerMessage::all();
+        return view('backend.customerMessage.index', [
+            'customerMessages'=>$customerMessages,
+        ]);
     }
 
     /**
@@ -27,7 +31,19 @@ class CustomerMessageController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $rules = [
+            'name'=>'required',
+            'email'=>'required',
+            'phone'=>'required',
+            'subject'=>'required',
+            'message'=>'required',
+        ];
+
+        $validatesData = $request->validate($rules);
+
+        customerMessage::create($validatesData);
+        toast('Add Success','success');   
+        return back();
     }
 
     /**
@@ -59,6 +75,8 @@ class CustomerMessageController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        customerMessage::find($id)->delete();
+        toast('Delete Success','warning');
+        return back();
     }
 }
