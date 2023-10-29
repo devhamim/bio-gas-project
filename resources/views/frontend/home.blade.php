@@ -230,7 +230,7 @@
             <div class="title-column col-lg-5 col-md-12">
                 <div class="inner-column">
                     <div class="sec-title">
-                        <span class="sub-title">our testimonials</span>
+                        <span class="sub-title">Client Feedback</span>
                         <h2>What They’re Talking About us.</h2>
                     </div>
                 </div>

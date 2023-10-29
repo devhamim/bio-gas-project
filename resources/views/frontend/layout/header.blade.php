@@ -54,7 +54,7 @@
             </div>
 
             <div class="outer-box">
-                <a href="tel:+92(8800)9806" class="info-btn">
+                <a href="tel:{{ $setting->first()->number }}" class="info-btn">
                     <i class="icon flaticon-phone-ringing"></i>
                     {{ $setting->first()->number }}
                 </a>
