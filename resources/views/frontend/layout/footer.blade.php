@@ -55,48 +55,33 @@
                 <!-- Footer COlumn -->
                 <div class="footer-column col-xl-2 col-lg-2 col-md-6 col-sm-12">
                     <div class="widget links-widget">
-                        <h6 class="widget-title">Explore</h6>
+                        <h6 class="widget-title">Company</h6>
                         <div class="widget-content">
                             <ul class="user-links">
-                                <li><a href="{{ route('our.team') }}">Meet the Team</a></li>
-                                <li><a href="{{ route('services') }}">Our Services</a></li>
-                                <li><a href="{{ route('our.blog') }}">Blogs</a></li>
+                                <li><a href="{{ url('/') }}">Home</a></li>
                                 <li><a href="{{ route('about_us') }}">About Us</a></li>
+                                <li><a href="{{ route('our.team') }}">Meet the Team</a></li>
+                                <li><a href="{{ route('gallerys') }}">Gallerys</a></li>
                                 <li><a href="{{ route('contect') }}">Contact</a></li>
                             </ul>                                
                         </div>
                     </div>
                 </div>
-
-
                 <!-- Footer COlumn -->
-                <div class="footer-column col-xl-3 col-lg-3 col-md-6 col-sm-12">
-                    <div class="widget gallery-widget">
-                        <h6 class="widget-title">Projects</h6>
+                <div class="footer-column col-xl-2 col-lg-2 col-md-6 col-sm-12">
+                    <div class="widget links-widget">
+                        <h6 class="widget-title">Importent</h6>
                         <div class="widget-content">
-                            <div class="outer">
-                                <figure class="image">
-                                    <a href="#"><img src="images/resource/project-thumb-1.jpg" alt=""></a>
-                                </figure>
-                                <figure class="image">
-                                    <a href="#"><img src="images/resource/project-thumb-2.jpg" alt=""></a>
-                                </figure>
-                                <figure class="image">
-                                    <a href="#"><img src="images/resource/project-thumb-3.jpg" alt=""></a>
-                                </figure>
-                                <figure class="image">
-                                    <a href="#"><img src="images/resource/project-thumb-4.jpg" alt=""></a>
-                                </figure>
-                                <figure class="image">
-                                    <a href="#"><img src="images/resource/project-thumb-5.jpg" alt=""></a>
-                                </figure>
-                                <figure class="image">
-                                    <a href="#"><img src="images/resource/project-thumb-6.jpg" alt=""></a>
-                                </figure>
-                            </div>
+                            <ul class="user-links">
+                                <li><a href="{{ route('services') }}">Our Services</a></li>
+                                <li><a href="{{ route('our.blog') }}">Blogs</a></li>
+                                <li><a href="{{ route('our.clients') }}">Clients</a></li>
+                                <li><a href="{{ route('our.privacy.policy') }}">Privacy Policy</a></li>
+                            </ul>                                
                         </div>
                     </div>
                 </div>
+
                 
                 <!-- Footer COlumn -->
                 <div class="footer-column col-xl-4 col-lg-4 col-md-6 col-sm-12">
