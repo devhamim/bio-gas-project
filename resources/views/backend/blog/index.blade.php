@@ -92,7 +92,6 @@
                                 </div>
                             </th>
                             <th>Added By</th>
-                            {{-- <th>Tag</th> --}}
                             <th>Define</th>
                             <th>Status</th>
                             <th>Action</th>
@@ -118,7 +117,6 @@
                                         <span class="table-dscr">N/A</span>
                                     @endif
                                 </td>
-                                {{-- <td><span class="table-dscr">{{ $blog->tags }}</span></td> --}}
                                 <td>
                                     @if ($blog->define == 2)
                                         <span class="table-dscr text-primary">Home</span>
@@ -156,30 +154,4 @@
 </div>
 @endsection
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script>
-    $(document).ready(function() {
-        const selectedTags = [];
-
-        $('#tags').on('keydown', function(e) {
-            if (e.key === 'Enter') {
-                e.preventDefault(); // Prevent form submission on Enter
-                const tag = $(this).val().trim();
-                if (tag !== '') {
-                    selectedTags.push(tag);
-                    $(this).val('');
-                    updateSelectedTags();
-                }
-            }
-        });
-
-        function updateSelectedTags() {
-            $('#selected-tags').empty();
-            selectedTags.forEach(function(tag) {
-                $('#selected-tags').append('<span class="tag bg-success text-white pb-1 px-2 rounded mx-1">' + tag + '</span><input type="hidden" readonly value="' + tag + '" name="tags[]" >');
-            });
-        }
-    });
-
-</script>
 
