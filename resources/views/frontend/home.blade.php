@@ -111,11 +111,8 @@
                         <h2>{{ $abouts->first()->title }}</h2>
                         <div class="text">{!! $abouts->first()->description !!}</div>
                     </div>
-
                     <div class="other-info">
-
                         <a href="{{ route('about_us') }}" class="theme-btn btn-style-one dark-bg"><span class="btn-title">About Us</span></a>
-
                     </div>
                 </div>
             </div>
