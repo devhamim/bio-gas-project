@@ -39,7 +39,6 @@ class BlogController extends Controller
         $rules = [
             'title'         =>'required',
             'image'         =>'',
-            // 'tags'         =>'array',
             'description'   =>'required',
             'define'       =>'required',
         ];
@@ -53,8 +52,6 @@ class BlogController extends Controller
             $validatesData['image'] = $file_name;
         }
 
-        // $tagsAsString = implode(',', $validatesData['tags']);
-        // $validatesData['tags'] = $tagsAsString;
         
         $validatesData['added_by'] = Auth::id(); 
         $validatesData['slug'] = Str::lower(str_replace(' ', '-', $request->title)). '-'. rand(0, 999999); 

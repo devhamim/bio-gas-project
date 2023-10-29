@@ -86,16 +86,10 @@
                 <!-- Footer COlumn -->
                 <div class="footer-column col-xl-4 col-lg-4 col-md-6 col-sm-12">
                     <div class="widget newsletter-widget">
-                        <h6 class="widget-title">Newsletter</h6>
+                        <h6 class="widget-title">Maps</h6>
                         <div class="widget-content">
-                            <div class="text">Subscribe our newsletter to get our latest update & news</div>
                             <div class="subscribe-form">
-                                <form method="post" action="#">
-                                    <div class="form-group">
-                                        <input type="email" name="email" class="email" value="" placeholder="Email Address" required="">
-                                        <button type="button" class="theme-btn"><i class="fa fa-paper-plane"></i></button>
-                                    </div>
-                                </form>
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.605716407397!2d90.34392157608612!3d23.761435688351174!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755bf62a849eb65%3A0xecaf9eed4ef8451a!2sMilitary%20House!5e0!3m2!1sen!2sbd!4v1698583054908!5m2!1sen!2sbd" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                             </div>
                         </div>
                     </div>
