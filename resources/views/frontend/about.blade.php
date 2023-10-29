@@ -31,7 +31,7 @@
 
                     <div class="other-info">
                         
-                        <a href="{{ route('about_us') }}" class="theme-btn btn-style-one dark-bg"><span class="btn-title">About Us</span></a>
+                        <a href="{{ route('contect') }}" class="theme-btn btn-style-one dark-bg"><span class="btn-title">Contect Us</span></a>
 
                     </div>
                 </div>
