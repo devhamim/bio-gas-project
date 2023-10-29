@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\blog;
+use App\Models\blogComment;
 use App\Models\feature;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -56,6 +57,7 @@ class BlogController extends Controller
         // $validatesData['tags'] = $tagsAsString;
         
         $validatesData['added_by'] = Auth::id(); 
+        $validatesData['slug'] = Str::lower(str_replace(' ', '-', $request->title)). '-'. rand(0, 999999); 
 
         blog::create($validatesData);
         toast('Add Success','success');
@@ -124,6 +126,22 @@ class BlogController extends Controller
     {
         blog::find($id)->delete();
         toast('Delete Success','warning');
+        return back();
+    }
+
+
+    // blog_comment
+    function blog_comment(Request $request){
+        $rules = [
+            'blogs_id'      => 'required',
+            'name'      => 'required',
+            'email'     => '',
+            'message'   => 'required',
+        ];
+        $validatesData = $request->validate($rules);
+
+        blogComment::create($validatesData);
+        toast('Message Sent Successfully','success');
         return back();
     }
 }

@@ -123,17 +123,17 @@
     <div class="footer-bottom">
         <div class="auto-container">
             <div class="row">
-                <div class="logo-column col-lg-4 col-md-4 order-2">
-                    <div class="footer-logo"><img src="images/logo.png" alt=""></div>
+                <div class="logo-column col-lg-5 col-md-5 order-2">
+                    <div class="footer-logo"><img src="{{ asset('uploads/setting') }}/{{ $setting->first()->footer_logo }}" alt=""></div>
                 </div>
-                <div class="links-column col-lg-4 col-md-4 order-3">
+                <div class="links-column col-lg-3 col-md-3 order-3">
                     <ul class="footer-links">
-                        <li><a href="#">Terms of Use</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
+                       
+                        <li><a href="{{ route('our.privacy.policy') }}">Privacy Policy</a></li>
                     </ul>
-                </div>
+                    </div>
                 <div class="col-lg-4 col-md-4">
-                    <p class="copyright-text">{{ $setting->first()->footer }}</p>
+                    <p class="copyright-text">{{ $setting->first()->footer }}  Design & Development by<a href="https://nugortech.com/" class="text-primary">Nugortechit</a></p>
                 </div>
             </div>
         </div>

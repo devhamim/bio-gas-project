@@ -5,16 +5,17 @@
 
 <head>
 <meta charset="utf-8">
-<title>Bio Gas</title>
+<title>{{ $setting->first()->title }}</title>
 <!-- Stylesheets -->
 <link href="{{ asset('frontend') }}/css/bootstrap.min.css" rel="stylesheet">
 <link href="{{ asset('frontend') }}/plugins/revolution/css/settings.css" rel="stylesheet" type="text/css"><!-- REVOLUTION SETTINGS STYLES -->
 <link href="{{ asset('frontend') }}/plugins/revolution/css/layers.css" rel="stylesheet" type="text/css"><!-- REVOLUTION LAYERS STYLES -->
 <link href="{{ asset('frontend') }}/plugins/revolution/css/navigation.css" rel="stylesheet" type="text/css"><!-- REVOLUTION NAVIGATION STYLES -->
+<link href="{{ asset('frontend') }}/css/venobox.min.css" rel="stylesheet" type="text/css"><!-- REVOLUTION NAVIGATION STYLES -->
 <link href="{{ asset('frontend') }}/css/style.css" rel="stylesheet">
 
-<link rel="shortcut icon" href="{{ asset('frontend') }}/images/favicon.png" type="image/x-icon">
-<link rel="icon" href="{{ asset('frontend') }}/images/favicon.png" type="image/x-icon">
+<link rel="shortcut icon" href="{{ asset('uploads/setting') }}/{{ $setting->first()->favicon }}" type="image/x-icon">
+<link rel="icon" href="{{ asset('uploads/setting') }}/{{ $setting->first()->favicon }}" type="image/x-icon">
 
 <!-- Responsive -->
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -26,14 +27,14 @@
 <body>
 
 <div class="page-wrapper">
-	
+
 	<!-- Preloader -->
-	<div class="preloader"></div>
-	
+
+
 	<!-- Main Header-->
 	@include('frontend.layout.header')
 	<!--End Main Header -->
-	
+
 	{{-- main start --}}
     @yield('content')
 	{{-- main end --}}
@@ -47,7 +48,7 @@
 <!-- Scroll To Top -->
 <div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-angle-up"></span></div>
 
-<script src="{{ asset('frontend') }}/js/jquery.js"></script> 
+<script src="{{ asset('frontend') }}/js/jquery.js"></script>
 <script src="{{ asset('frontend') }}/js/popper.min.js"></script>
 <!--Revolution Slider-->
 <script src="{{ asset('frontend') }}/plugins/revolution/js/jquery.themepunch.revolution.min.js"></script>
@@ -68,9 +69,15 @@
 <script src="{{ asset('frontend') }}/js/wow.js"></script>
 <script src="{{ asset('frontend') }}/js/appear.js"></script>
 <script src="{{ asset('frontend') }}/js/select2.min.js"></script>
+<script src="{{ asset('frontend') }}/js/venobox.min.js"></script>
 <script src="{{ asset('frontend') }}/js/owl.js"></script>
 <script src="{{ asset('frontend') }}/js/script.js"></script>
-</body>
 
-<!-- Mirrored from kodesolution.com/html/2023/disle-html/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 24 Oct 2023 07:18:24 GMT -->
+
+<script>
+    new VenoBox({
+    selector: ".my-link"
+});
+</script>
+</body>
 </html>

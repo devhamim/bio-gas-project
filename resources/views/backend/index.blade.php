@@ -11,7 +11,8 @@
     </div> --}}
 </div>
 <div class="row mb-30">
-    <div class="col-lg-3 col-6 col-xs-12">
+    <h1>Welcome to Dashboard</h1>
+    {{-- <div class="col-lg-3 col-6 col-xs-12">
         <div class="dashboard-top-box rounded-bottom panel-bg">
             <div class="left">
                 <h3>$34,152</h3>
@@ -70,10 +71,10 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
 </div>
 <div class="row">
-    <div class="col-xxl-8">
+    {{-- <div class="col-xxl-8">
         <div class="panel chart-panel-1">
             <div class="panel-header">
                 <h5>Sales Analytics</h5>
@@ -386,6 +387,6 @@
                 <div class="table-bottom-control"></div>
             </div>
         </div>
-    </div>
+    </div> --}}
 </div>
 @endsection

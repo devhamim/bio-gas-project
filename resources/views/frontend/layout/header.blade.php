@@ -16,11 +16,7 @@
             </div>
     
             <div class="top-right">
-                <ul class="useful-links">
-                    <li><a href="#">Help</a></li>
-                    <li><a href="#">Support</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
+                
                 <ul class="social-icon-one">
                     <li><a href="{{ $setting->first()->twitter }}"><span class="fab fa-twitter"></span></a></li>
                     <li><a href="{{ $setting->first()->facebook }}"><span class="fab fa-facebook-square"></span></a></li>
@@ -36,7 +32,7 @@
         <!-- Main box -->
         <div class="main-box">
             <div class="logo-box">
-                <div class="logo"><a href="{{ url('/') }}"><img src="{{ asset('uploads/setting') }}/{{ $setting->first()->logo }}" alt="" title="Tronis"></a></div>
+                <div class="logo"><a href="{{ url('/') }}"><img width="50%" src="{{ asset('uploads/setting') }}/{{ $setting->first()->logo }}" alt="" title="Tronis"></a></div>
             </div>
 
 
@@ -129,7 +125,7 @@
             <div class="inner-container">
                 <!--Logo-->
                 <div class="logo">
-                    <a href="{{ url('/') }}" title=""><img src="images/logo-2.png" alt="" title=""></a>
+                    <a href="{{ url('/') }}" title=""><img src="{{ asset('uploads/setting') }}/{{ $setting->first()->footer_logo }}" alt="" title=""></a>
                 </div>
     
                 <!--Right Col-->

@@ -27,7 +27,8 @@
 					<div class=" project-block col-lg-4 col-md-6 col-sm-12">
 						<div class="inner-box">
 							<div class="image-box">
-								<figure class="image"><a><img src="{{ asset('uploads/gallery') }}/{{ $gallery->image }}" alt=""></a></figure>
+								<figure class="image"><a class="my-link" href="{{ asset('uploads/gallery') }}/{{ $gallery->image }}"><img src="{{ asset('uploads/gallery') }}/{{ $gallery->image }}" alt="image alt"/></a></figure>
+
 							</div>
 							<div class="content-box">
 								<a class="icon"><i class="fa fa-long-arrow-alt-right"></i></a>
@@ -43,3 +44,5 @@
 	</section>
 	<!--End projects-section-->
 @endsection
+
+

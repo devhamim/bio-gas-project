@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\AchieveController;
+use App\Http\Controllers\BannerController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\clientsController;
 use App\Http\Controllers\CustomerMessageController;
@@ -41,10 +42,14 @@ Route::get('/about-us', [FrontendController::class, 'about_us'])->name('about_us
 Route::get('/services', [FrontendController::class, 'services'])->name('services');
 Route::get('/our-portfolio', [FrontendController::class, 'our_portfolio'])->name('our.portfolio');
 Route::get('/our-blog', [FrontendController::class, 'our_blog'])->name('our.blog');
+Route::get('/our-blog/details/{slug}', [FrontendController::class, 'our_blog_details'])->name('our.blog.details');
 Route::get('/contect', [FrontendController::class, 'contect'])->name('contect');
 Route::get('/gallerys', [FrontendController::class, 'gallerys'])->name('gallerys');
 Route::get('/our/team', [FrontendController::class, 'our_team'])->name('our.team');
 Route::get('/our/clients', [FrontendController::class, 'our_clients'])->name('our.clients');
+Route::get('/our/privacy/policy', [FrontendController::class, 'our_privacy_policy'])->name('our.privacy.policy');
+
+Route::post('/blog/comment', [BlogController::class, 'blog_comment'])->name('blog.comment');
 
 Auth::routes();
 
@@ -52,6 +57,7 @@ Auth::routes();
 Route::get('/home', [HomeController::class, 'index'])->name('index');
         Route::resources([
             'users'      => UserController::class,
+            'banner'      => BannerController::class,
             'setting'      => SettingController::class,
             'feature'      => FeatureController::class,
             'about'        => AboutController::class,

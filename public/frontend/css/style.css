@@ -2586,7 +2586,7 @@ Main Header
   text-align: center;
   opacity: 1;
   color: #ffffff;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 30px;
   font-weight: 500;
   padding: 0;
@@ -2869,8 +2869,6 @@ Header Style One
   left: 0;
   top: 100%;
   width: 100%;
-  -webkit-box-shadow: 0 10px 60px rgba(0, 0, 0, 0.15);
-          box-shadow: 0 10px 60px rgba(0, 0, 0, 0.15);
 }
 @media (max-width: 991.98px) {
   .header-style-one .header-lower {
@@ -2933,7 +2931,7 @@ Header Style One
 }
 @media only screen and (max-width: 1699px) {
   .header-style-one .main-box .main-menu .navigation > li {
-    margin-right: 50px;
+    margin-right: 25px;
   }
   .header-style-one .main-box .main-menu .navigation > li:last-child {
     margin-right: 0;
@@ -3275,7 +3273,7 @@ Sticky Header
 
 .sticky-header .main-menu .navigation > li {
   margin: 0;
-  margin-left: 60px;
+  margin-left: 25px;
   padding: 20px 0;
 }
 
@@ -3980,8 +3978,7 @@ Section Title
   }
 }
 .main-slider .tp-dottedoverlay {
-  background-color: rgba(23, 23, 23, 0.65);
-  background-image: url(../images/main-slider/overlay-shape.png);
+
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

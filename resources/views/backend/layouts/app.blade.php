@@ -6,9 +6,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard | Revel eCommerce Admin</title>
+    <title>{{ $setting->first()->title }}</title>
     
-    <link rel="shortcut icon" href="favicon.png">
+    <link rel="shortcut icon" href="{{ asset('uploads/setting') }}/{{ $setting->first()->favicon }}">
     <link rel="stylesheet" href="{{ asset('backend') }}/assets/vendor/css/all.min.css">
     <link rel="stylesheet" href="{{ asset('backend') }}/assets/vendor/css/OverlayScrollbars.min.css">
     <link rel="stylesheet" href="{{ asset('backend') }}/assets/vendor/css/jquery.dataTables.min.css">
@@ -41,6 +41,7 @@
     </div>
 
     @include('sweetalert::alert')
+
     
     <script src="{{ asset('backend') }}/assets/vendor/js/jquery-3.6.0.min.js"></script>
     <script src="{{ asset('backend') }}/assets/vendor/js/jquery.overlayScrollbars.min.js"></script>

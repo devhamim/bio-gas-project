@@ -18,6 +18,9 @@
                         <a href="{{ route('feature.index') }}" class="sidebar-link"><span class="nav-icon"><i class="fa-light fa-plus-square"></i></span> <span class="sidebar-txt">Feature</span></a>
                     </li> --}}
                     <li class="sidebar-dropdown-item">
+                        <a href="{{ route('banner.index') }}" class="sidebar-link"><span class="nav-icon"><i class="fa-light fa-boxes"></i></span> <span class="sidebar-txt">Banner</span></a>
+                    </li>
+                    <li class="sidebar-dropdown-item">
                         <a href="{{ route('about.index') }}" class="sidebar-link"><span class="nav-icon"><i class="fa-light fa-boxes"></i></span> <span class="sidebar-txt">About</span></a>
                     </li>
                     <li class="sidebar-dropdown-item">
@@ -55,7 +58,7 @@
                     </li>
                 </ul>
             </li>
-            
+
         </ul>
     </div>
 </div>

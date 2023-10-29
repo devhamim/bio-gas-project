@@ -49,7 +49,7 @@
                  responsiveLevels:[1200,1040,802,480],
                  visibilityLevels:[1200,1040,802,480],
                  gridwidth:[1200,1040,800,480],
-                 gridheight:[840,840,840,840],
+                 gridheight:[600,600,600,600],
                  lazyType:"none",
                  parallax: {
                      type:"mouse",
