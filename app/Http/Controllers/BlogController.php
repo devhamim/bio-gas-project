@@ -78,10 +78,8 @@ class BlogController extends Controller
     public function edit(string $id)
     {
         $blogs = blog::find($id);
-        $tagsAsString = $blogs->tags;
         return view('backend.blog.edit', [
             'blogs'=>$blogs,
-            'tagsAsString'=>$tagsAsString,
         ]);
     }
 
@@ -93,7 +91,6 @@ class BlogController extends Controller
         $rules = [
             'title'             =>'required',
             'image'             =>'',
-            // 'tags'              =>'array',
             'description'       =>'required',
             'define'            =>'required',
             'status'            =>'',
@@ -108,11 +105,6 @@ class BlogController extends Controller
             $image->move(public_path('uploads/blog'), $file_name);
             $validatesData['image'] = $file_name; 
         }
-        // if (!isset($validatesData['tags'])) {
-        //     $validatesData['tags'] = [];
-        // }
-        // $tagsAsString = implode(',', $validatesData['tags']);
-        // $validatesData['tags'] = $tagsAsString;
 
         blog::where('id', $id)->update($validatesData);
         toast('Update Success','success');   

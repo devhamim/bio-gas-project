@@ -25,7 +25,7 @@
                 <div class="contact-info-block col-lg-4 col-md-6">
                     <div class="inner">
                         <i class="icon lnr-icon-clock"></i>
-                        <div class="text">Mon - Sat: 8:00 am to 6:00 pm <br>Sunday: CLOSED</div>
+                        <div class="text">Sat - Thu: 10:00 am to 6:00 pm <br>Friday: CLOSED</div>
                     </div>
                 </div>
             </div>

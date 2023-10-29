@@ -32,16 +32,7 @@
                                 <img width="100" id="blah" src="{{ asset('uploads/blog') }}/{{ $blogs->image }}" alt="">
                             </div>
                         </div>
-                        {{-- <div class="col-sm-6">
-                            <label class="form-label" for="tags">Tags</label>
-                            <input type="text" name="tags" id="tags" class="form-control form-control-sm @error('tags') is-invalid @enderror" value="{{ old('tags') }}">
-                        </div>
-                        <div id="selected-tags">
-                            <!-- Existing tags will be displayed here -->
-                                @foreach(explode(',', $blogs->tags) as $tag)
-                                    <span class="tag bg-success text-white pb-1 px-2 rounded mx-1">{{ $tag }}</span>
-                                @endforeach
-                        </div> --}}
+                        
                         <div class="col-6">
                             <label class="form-label">Home Page</label>
                             <div class="form-check mb-10">
@@ -82,47 +73,3 @@
     
 </div>
 @endsection
-
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script>
-  $(document).ready(function() {
-    let selectedTags = [];
-
-    // Add existing tags to the selectedTags array
-    @foreach(explode(',', $blogs->tags) as $tag)
-        selectedTags.push('{{ $tag }}');
-    @endforeach
-
-    // Function to update selected tags
-    function updateSelectedTags() {
-        $('#selected-tags').empty();
-        selectedTags.forEach(function(tag) {
-            $('#selected-tags').append('<span class="tag bg-success text-white pb-1 px-2 rounded mx-1">' + tag + '</span><a href="#" class="remove-tag" data-tag="' + tag + '">Remove</a>');
-        });
-    }
-
-    // Initial update of selected tags
-    updateSelectedTags();
-
-    $('#tags').on('keydown', function(e) {
-        if (e.key === 'Enter') {
-            e.preventDefault(); // Prevent form submission on Enter
-            const tag = $(this).val().trim();
-            if (tag !== '') {
-                selectedTags.push(tag);
-                $(this).val('');
-                updateSelectedTags();
-            }
-        }
-    });
-    
-    // Handle tag removal
-    $('#selected-tags').on('click', '.remove-tag', function(e) {
-        e.preventDefault();
-        const tagToRemove = $(this).data('tag');
-        selectedTags = selectedTags.filter(tag => tag !== tagToRemove); // Reassigning is allowed now
-        updateSelectedTags();
-    });
-});
-
-</script>
