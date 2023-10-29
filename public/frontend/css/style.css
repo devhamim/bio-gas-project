@@ -743,7 +743,7 @@ li {
   background-repeat: no-repeat;
   -webkit-animation: fa-spin 2s infinite linear;
           animation: fa-spin 2s infinite linear;
-  background-image: url(../images/favicon.png);
+  background-image: url(../images/loding.png);
   content: "";
 }
 
