@@ -187,12 +187,14 @@
                 <div class=" project-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
                     <div class="inner-box">
                         <div class="image-box">
-                            <figure class="image"><a class="my-link"  href="{{ asset('uploads/gallery') }}/{{ $gallery->image }}"><img  src="{{ asset('uploads/gallery') }}/{{ $gallery->image }}" alt="image alt"/></a></figure>
+                            <figure class="image">
+                                <a class="my-image-links" data-maxwidth="50%" data-gall="gallery01" href="{{ asset('uploads/gallery') }}/{{ $gallery->image }}"><img src="{{ asset('uploads/gallery') }}/{{ $gallery->image }}"></a>
+                            </figure>
                         </div>
                         <div class="content-box">
-                            <a href="page-project-details.html" class="icon"><i class="fa fa-long-arrow-alt-right"></i></a>
+                            <a  class="icon"><i class="fa fa-long-arrow-alt-right"></i></a>
                             <span class="cat">{{ $gallery->address }}</span>
-                            <h4 class="title"><a href="page-project-details.html" title="">{{ $gallery->title }}</a></h4>
+                            <h4 class="title"><a  title="">{{ $gallery->title }}</a></h4>
                         </div>
                     </div>
                 </div>
