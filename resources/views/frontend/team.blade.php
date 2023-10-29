@@ -4,7 +4,7 @@
  <section class="page-title" style="background-image: url({{ asset('frontend') }}/images/background/page-title.jpg);">
 	<div class="auto-container">
 		<div class="title-outer">
-			<h1 class="title">Team Grid</h1>
+			<h1 class="title">Our Team</h1>
 			<ul class="page-breadcrumb">
 				<li><a href="{{ url('/') }}">Home</a></li>
 				<li>Team</li>

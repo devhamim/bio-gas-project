@@ -133,7 +133,7 @@
                     </ul>
                     </div>
                 <div class="col-lg-4 col-md-4">
-                    <p class="copyright-text">{{ $setting->first()->footer }}  Design & Development by<a href="https://nugortech.com/" class="text-primary">Nugortechit</a></p>
+                    <p class="copyright-text">{{ $setting->first()->footer }}  Design & Development by <a href="https://nugortech.com/" class="text-primary">Nugortechit</a></p>
                 </div>
             </div>
         </div>

@@ -4955,7 +4955,7 @@ Section Title
 }
 .feature-block .inner-box .content-box .title {
   font-weight: 900;
-  max-width: 130px;
+  max-width: 200px;
   letter-spacing: -0.04em;
   margin: 0 auto 6px;
 }
@@ -8950,6 +8950,10 @@ Section Title
   position: relative;
   overflow: hidden;
   text-align: center;
+  border: 1px solid green;
+  margin: 0 5px;
+  padding: 0 5px;
+  border-radius: 5px;
 }
 .client-block a {
   position: relative;

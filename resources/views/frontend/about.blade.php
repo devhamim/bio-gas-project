@@ -2,7 +2,7 @@
 
 @section('content')
 <!-- Start main-content -->
-<section class="page-title" style="background-image: url(images/background/page-title.jpg);">
+<section class="page-title" style="background-image: url({{ asset('frontend') }}/images/background/page-title.jpg);">
     <div class="auto-container">
         <div class="title-outer">
             <h1 class="title">About Us</h1>
@@ -99,70 +99,6 @@
 </section>
 <!--End Clients Section -->
 
- {{-- <!-- Why Choose Us -->
-<section class="why-choose-us-two">
-    <div class="bg bg-pattern-11"></div>
-
-    <div class="auto-container">
-        <div class="row">
-            <!-- Image Column -->
-            <div class="image-column col-lg-6 col-md-12">
-                <div class="inner-column">
-                    <div class="sec-title">
-                        <span class="sub-title">Why choose us</span>
-                        <h2> Easy & Fastest Build <br>your Website.</h2>
-                    </div>
-
-                    <div class="image-box">
-                        <figure class="image-2"><img src="{{ asset('frontend') }}/images/resource/why-us-2.png" alt=""></figure>
-                        <figure class="image-1"><img src="{{ asset('frontend') }}/images/resource/why-us-1.png" alt=""></figure>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Features Column -->
-            <div class="features-column col-lg-6 col-md-12">
-                <div class="inner-column">
-                    <div class="row">
-                        <!-- Feature Block Three -->
-                        <div class="feature-block-three">
-                            <div class="inner-box">
-                                <div class="title-box">
-                                    <i class="icon fa fa-user-group"></i>
-                                    <h5 class="title">Latest Technology</h5>
-                                </div>
-                                <div class="text">Sed quia magni doles eos qui ration volupta tem sequi nesciunt eque porro.</div>
-                            </div>
-                        </div>
-
-                        <!-- Feature Block Three -->
-                        <div class="feature-block-three">
-                            <div class="inner-box">
-                                <div class="title-box">
-                                    <i class="icon fa fa-user-group"></i>
-                                    <h5 class="title">Certified Experts</h5>
-                                </div>
-                                <div class="text">Sed quia magni doles eos qui ration volupta tem sequi nesciunt eque porro.</div>
-                            </div>
-                        </div>
-
-                        <!-- Feature Block Three -->
-                        <div class="feature-block-three">
-                            <div class="inner-box">
-                                <div class="title-box">
-                                    <i class="icon fa fa-user-group"></i>
-                                    <h5 class="title">Get Reasonable Price</h5>
-                                </div>
-                                <div class="text">Sed quia magni doles eos qui ration volupta tem sequi nesciunt eque porro.</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- end-benifet-sec --> --}}
 
 <!-- Team Section -->
 <section class="team-section">
