@@ -6391,7 +6391,7 @@ Section Title
   top: 0;
   height: 100%;
   width: 100%;
-  background-image: url(../images/icons/shape8-light.png);
+  /* background-image: url(../images/icons/shape8-light.png); */
   -webkit-transform: scale(0);
           transform: scale(0);
   opacity: 0;

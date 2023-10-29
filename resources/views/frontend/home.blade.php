@@ -220,44 +220,6 @@
 </section>
 <!--End Clients Section -->
 
-<!-- Fun Fact Section -->
-<section class="fun-fact-section pb-0">
-    <div class="bg bg-image" style="background-image: url({{ asset('frontend') }}/images/background/1.jpg)"></div>
-    <div class="bg bg-lines"></div>
-
-    <div class="auto-container">
-        <div class="fact-counter">
-            <div class="row">
-                <!-- Counter block-->
-                @foreach ($achieves->take(4) as $achieve)
-                <div class="counter-block col-lg-3 col-md-6 col-sm-12 wow fadeInUp">
-                    <div class="inner">
-                        <div class="icon-box" style="background-repeat: no-repeat"><i><img src="{{ asset('uploads/achieve') }}/{{ $achieve->icon }}" alt=""></i></div>
-                        <div class="count-box"><span class="count-text" data-speed="3000" data-stop="{{ $achieve->total }}">0</span></div>
-                        <h4 class="counter-title">{{ $achieve->title }}</h4>
-                    </div>
-                </div>
-                @endforeach
-
-            </div>
-        </div>
-
-        <div class="call-to-action pull-down">
-            <div class="outer-box">
-                <div class="bg bg-pattern-3"></div>
-                <div class="title-box">
-                    <h3 class="title">Let see our all service.</h3>
-                    <a href="{{ route('services') }}" title="" class="theme-btn btn-style-one dark-bg hover-light"><span class="btn-title">Service</span></a>
-                </div>
-                <div class="image-box">
-                    <span class="icon icon-bulb"></span>
-                    <figure class="image"><img src="{{ asset('frontend') }}/images/resource/woman.png" alt=""></figure>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- End Fun Fact Section -->
 
 <!-- Testimonial Section -->
 <section class="testimonial-section">
