@@ -22,7 +22,7 @@
         <div class="row">
             <!-- Service Block Four -->
             @foreach ($services as $service)
-            <div class="service-block-four col-lg-3 col-md-6 col-sm-12">
+            <div class="service-block-four col-lg-4 col-md-6 col-sm-12">
                 <div class="inner-box">
                     <div class="image-box">
                         <figure class="image"><a><img src="{{ asset('uploads/service') }}/{{ $service->image }}" alt=""></a></figure>
